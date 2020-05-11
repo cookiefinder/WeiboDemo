@@ -3,16 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		5F7D2F5DADA4AC63D43A78FF /* Pods_WeiboDemo_WeiboDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19038C85678993A5EE80002 /* Pods_WeiboDemo_WeiboDemoUITests.framework */; };
 		B64A60FD867565C63798394A /* Pods_WeiboDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F3B4B00502744F7AEB540E3 /* Pods_WeiboDemoTests.framework */; };
 		EF4A34D935FA382EDE5893E3 /* Pods_WeiboDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FDBE6B49BA9D63C81F3BDC8 /* Pods_WeiboDemo.framework */; };
+		F4EFBD0A24692E74002FE54C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFBD0824692E74002FE54C /* ViewController.swift */; };
+		F4EFBD0B24692E74002FE54C /* UserProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4EFBD0924692E74002FE54C /* UserProfileCell.xib */; };
+		F4EFBD0F2469334E002FE54C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFBD0E2469334E002FE54C /* HomeViewModel.swift */; };
+		F4EFBD11246954E5002FE54C /* UserProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFBD10246954E5002FE54C /* UserProfileCell.swift */; };
 		FD8C8D2424690975004317BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D2324690975004317BC /* AppDelegate.swift */; };
 		FD8C8D2624690975004317BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D2524690975004317BC /* SceneDelegate.swift */; };
-		FD8C8D2824690975004317BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D2724690975004317BC /* ViewController.swift */; };
+		FD8C8D2824690975004317BC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D2724690975004317BC /* HomeViewController.swift */; };
 		FD8C8D2B24690975004317BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD8C8D2924690975004317BC /* Main.storyboard */; };
 		FD8C8D2D2469097C004317BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD8C8D2C2469097C004317BC /* Assets.xcassets */; };
 		FD8C8D302469097C004317BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD8C8D2E2469097C004317BC /* LaunchScreen.storyboard */; };
@@ -46,11 +50,15 @@
 		C5E4746D20C539F676C94AE8 /* Pods-WeiboDemo-WeiboDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeiboDemo-WeiboDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-WeiboDemo-WeiboDemoUITests/Pods-WeiboDemo-WeiboDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D11520A01929A8F55E3FA47B /* Pods-WeiboDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeiboDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-WeiboDemoTests/Pods-WeiboDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DF94BB1095CF65582030338F /* Pods-WeiboDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeiboDemoTests.release.xcconfig"; path = "Target Support Files/Pods-WeiboDemoTests/Pods-WeiboDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		F4EFBD0824692E74002FE54C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Cell/ViewController.swift; sourceTree = "<group>"; };
+		F4EFBD0924692E74002FE54C /* UserProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserProfileCell.xib; sourceTree = "<group>"; };
+		F4EFBD0E2469334E002FE54C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		F4EFBD10246954E5002FE54C /* UserProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileCell.swift; sourceTree = "<group>"; };
 		F66F4DCFBE00011AB7332E27 /* Pods-WeiboDemo-WeiboDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeiboDemo-WeiboDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-WeiboDemo-WeiboDemoUITests/Pods-WeiboDemo-WeiboDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FD8C8D2024690975004317BC /* WeiboDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeiboDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD8C8D2324690975004317BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD8C8D2524690975004317BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FD8C8D2724690975004317BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FD8C8D2724690975004317BC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FD8C8D2A24690975004317BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FD8C8D2C2469097C004317BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD8C8D2F2469097C004317BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,7 +109,6 @@
 				D11520A01929A8F55E3FA47B /* Pods-WeiboDemoTests.debug.xcconfig */,
 				DF94BB1095CF65582030338F /* Pods-WeiboDemoTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -113,6 +120,22 @@
 				0F3B4B00502744F7AEB540E3 /* Pods_WeiboDemoTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F4EFBD0724692E2F002FE54C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F4EFBD0924692E74002FE54C /* UserProfileCell.xib */,
+				F4EFBD10246954E5002FE54C /* UserProfileCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F4EFBD1224695504002FE54C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		FD8C8D1724690975004317BC = {
@@ -142,8 +165,12 @@
 			children = (
 				FD8C8D2324690975004317BC /* AppDelegate.swift */,
 				FD8C8D2524690975004317BC /* SceneDelegate.swift */,
-				FD8C8D2724690975004317BC /* ViewController.swift */,
 				FD8C8D2924690975004317BC /* Main.storyboard */,
+				F4EFBD0824692E74002FE54C /* ViewController.swift */,
+				F4EFBD1224695504002FE54C /* Home */,
+				FD8C8D2724690975004317BC /* HomeViewController.swift */,
+				F4EFBD0E2469334E002FE54C /* HomeViewModel.swift */,
+				F4EFBD0724692E2F002FE54C /* Cell */,
 				FD8C8D2C2469097C004317BC /* Assets.xcassets */,
 				FD8C8D2E2469097C004317BC /* LaunchScreen.storyboard */,
 				FD8C8D312469097C004317BC /* Info.plist */,
@@ -281,6 +308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4EFBD0B24692E74002FE54C /* UserProfileCell.xib in Resources */,
 				FD8C8D302469097C004317BC /* LaunchScreen.storyboard in Resources */,
 				FD8C8D2D2469097C004317BC /* Assets.xcassets in Resources */,
 				FD8C8D2B24690975004317BC /* Main.storyboard in Resources */,
@@ -462,8 +490,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD8C8D2824690975004317BC /* ViewController.swift in Sources */,
+				F4EFBD0A24692E74002FE54C /* ViewController.swift in Sources */,
+				FD8C8D2824690975004317BC /* HomeViewController.swift in Sources */,
 				FD8C8D2424690975004317BC /* AppDelegate.swift in Sources */,
+				F4EFBD0F2469334E002FE54C /* HomeViewModel.swift in Sources */,
+				F4EFBD11246954E5002FE54C /* UserProfileCell.swift in Sources */,
 				FD8C8D2624690975004317BC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
