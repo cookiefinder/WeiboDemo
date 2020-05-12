@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class IndexViewController: UIViewController {
 
     var titleView = TitleView()
     var titleViewIsPop = false
