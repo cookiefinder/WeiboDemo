@@ -1,11 +1,3 @@
-//
-//  IndexViewController.swift
-//  WeiboDemo
-//
-//  Created by Zijie Jiang on 2020/5/12.
-//  Copyright © 2020 Zijie Jiang. All rights reserved.
-//
-
 import UIKit
 
 class IndexViewController: UIViewController {
