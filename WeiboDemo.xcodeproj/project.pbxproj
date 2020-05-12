@@ -24,6 +24,7 @@
 		FD8C8D462469097C004317BC /* WeiboDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D452469097C004317BC /* WeiboDemoUITests.swift */; };
 		FD8C8D5824695188004317BC /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D5724695188004317BC /* TitleView.swift */; };
 		FD8C8D5A246A42D9004317BC /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D59246A42D9004317BC /* IndexViewController.swift */; };
+		FD8C8D5F246A4B0A004317BC /* TestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D5E246A4B0A004317BC /* TestApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		FD8C8D472469097C004317BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD8C8D5724695188004317BC /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		FD8C8D59246A42D9004317BC /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
+		FD8C8D5E246A4B0A004317BC /* TestApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 		FD8C8D2224690975004317BC /* WeiboDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FD8C8D5D246A4ADE004317BC /* Api */,
 				FD8C8D2324690975004317BC /* AppDelegate.swift */,
 				FD8C8D2524690975004317BC /* SceneDelegate.swift */,
 				FD8C8D2924690975004317BC /* Main.storyboard */,
@@ -200,6 +203,14 @@
 				FD8C8D472469097C004317BC /* Info.plist */,
 			);
 			path = WeiboDemoUITests;
+			sourceTree = "<group>";
+		};
+		FD8C8D5D246A4ADE004317BC /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				FD8C8D5E246A4B0A004317BC /* TestApi.swift */,
+			);
+			path = Api;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -504,6 +515,7 @@
 				FD8C8D2624690975004317BC /* SceneDelegate.swift in Sources */,
 				FD8C8D5824695188004317BC /* TitleView.swift in Sources */,
 				FD8C8D5A246A42D9004317BC /* IndexViewController.swift in Sources */,
+				FD8C8D5F246A4B0A004317BC /* TestApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -76,11 +76,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-
             <point key="canvasLocation" x="-3004" y="3679"/>
-
-            <point key="canvasLocation" x="2868.115942028986" y="3740.625"/>
-
         </scene>
         <!--IndexViewController-->
         <scene sceneID="PAW-Ml-lMt">
@@ -93,7 +89,11 @@
                         <viewLayoutGuide key="safeArea" id="lF0-rn-Lkz"/>
                     </view>
                     <navigationItem key="navigationItem" title="主页" id="mle-42-fZz">
-                        <barButtonItem key="leftBarButtonItem" image="person.circle.fill" catalog="system" id="oCB-jc-DzR"/>
+                        <barButtonItem key="leftBarButtonItem" image="person.circle.fill" catalog="system" id="oCB-jc-DzR">
+                            <connections>
+                                <action selector="handleClickAvatarImage:" destination="B7T-ME-FV9" id="3cA-et-G6s"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem image="square.and.pencil" catalog="system" id="q6J-rW-TsX"/>
                             <barButtonItem image="magnifyingglass" catalog="system" id="jze-NK-nf8"/>
