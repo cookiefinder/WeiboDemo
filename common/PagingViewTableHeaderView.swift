@@ -9,7 +9,8 @@
 import UIKit
 
 class PagingViewTableHeaderView: UIView {
-    lazy var imageView: UIImageView = UIImageView(image: UIImage(named: "lufei.jpg"))
+//    lazy var imageView: UIImageView = UIImageView(image: UIImage(named: "lufei.jpg"))
+    lazy var imageView: UserProfileHeaderView = UserProfileHeaderView()
     var imageViewFrame: CGRect = CGRect.zero
 
     override init(frame: CGRect) {

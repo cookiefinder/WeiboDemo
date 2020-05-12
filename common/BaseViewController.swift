@@ -17,7 +17,7 @@ class BaseViewController: UIViewController {
     lazy var userHeaderView: PagingViewTableHeaderView = preferredTableHeaderView()
     let dataSource: JXSegmentedTitleDataSource = JXSegmentedTitleDataSource()
     lazy var segmentedView: JXSegmentedView = JXSegmentedView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: CGFloat(headerInSectionHeight)))
-    var titles = ["能力", "爱好", "队友"]
+    var titles = ["微博", "视频", "相册"]
     var tableHeaderViewHeight: Int = 200
     var headerInSectionHeight: Int = 50
     var isNeedHeader = false
@@ -26,7 +26,6 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "个人中心"
         self.navigationController?.navigationBar.isTranslucent = false
 
         dataSource.titles = titles
