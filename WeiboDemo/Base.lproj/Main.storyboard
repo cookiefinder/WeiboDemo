@@ -11,68 +11,8 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="WeiboDemo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pkA-sn-tbM" userLabel="Blue Background View">
-                                <rect key="frame" x="0.0" y="88" width="414" height="200"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="zoE-Jg-Q8w"/>
-                                </constraints>
-                            </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jf5-pr-FZe">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserProfileCell" rowHeight="163" id="PSv-6i-Hhp" customClass="UserProfileCell" customModule="WeiboDemo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="163"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PSv-6i-Hhp" id="qw6-2Y-aEQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="163"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A3y-bq-0lA">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="163"/>
-                                                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="163" id="4IA-nZ-2l9"/>
-                                                    </constraints>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="A3y-bq-0lA" secondAttribute="bottom" id="2GW-AZ-dB4"/>
-                                                <constraint firstItem="A3y-bq-0lA" firstAttribute="top" secondItem="qw6-2Y-aEQ" secondAttribute="top" id="P6v-XU-8At"/>
-                                                <constraint firstItem="A3y-bq-0lA" firstAttribute="leading" secondItem="qw6-2Y-aEQ" secondAttribute="leading" id="fpU-q7-2fE"/>
-                                                <constraint firstAttribute="trailing" secondItem="A3y-bq-0lA" secondAttribute="trailing" id="mKQ-f4-jfc"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="E6s-wl-bch"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="QSH-cF-PiC"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Jf5-pr-FZe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2la-Ha-QaT"/>
-                            <constraint firstItem="pkA-sn-tbM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="A2a-nA-bLH"/>
-                            <constraint firstItem="Jf5-pr-FZe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AiL-E9-gSC"/>
-                            <constraint firstItem="pkA-sn-tbM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="F0z-k7-WWK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pkA-sn-tbM" secondAttribute="trailing" id="Ic8-Gz-One"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jf5-pr-FZe" secondAttribute="trailing" id="Q3q-B1-gG7"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jf5-pr-FZe" secondAttribute="bottom" id="eyA-hb-coL"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
                     <navigationItem key="navigationItem" id="37A-tg-aFh"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="tableView" destination="Jf5-pr-FZe" id="wKa-gw-HGh"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
