@@ -1,3 +1,4 @@
+
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
@@ -11,7 +12,10 @@ target 'WeiboDemo' do
   pod 'SnapKit', '~> 5.0.0'
   pod "ESPullToRefresh", '~> 2.9.2'
   pod "Weibo_SDK", :git => "https://github.com/sinaweibosdk/weibo_ios_sdk.git"  
-
+  pod 'JXPagingView/Paging'
+  pod 'JXSegmentedView'
+  pod 'MJRefresh'
+  
   target 'WeiboDemoTests' do
     inherit! :search_paths
     # Pods for testing
