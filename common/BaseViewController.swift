@@ -18,7 +18,7 @@ class BaseViewController: UIViewController {
     let dataSource: JXSegmentedTitleDataSource = JXSegmentedTitleDataSource()
     lazy var segmentedView: JXSegmentedView = JXSegmentedView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: CGFloat(headerInSectionHeight)))
     var titles = ["微博", "视频", "相册"]
-    var tableHeaderViewHeight: Int = 200
+    var tableHeaderViewHeight: Int = 300
     var headerInSectionHeight: Int = 50
     var isNeedHeader = false
     var isNeedFooter = false
@@ -41,7 +41,7 @@ class BaseViewController: UIViewController {
 
         let lineView = JXSegmentedIndicatorLineView()
         lineView.indicatorColor = UIColor(red: 105/255, green: 144/255, blue: 239/255, alpha: 1)
-        lineView.indicatorWidth = 30
+        lineView.indicatorWidth = (UIScreen.main.bounds.width - 10.0 * 2) / 3
         segmentedView.indicators = [lineView]
 
         let lineWidth = 1/UIScreen.main.scale
