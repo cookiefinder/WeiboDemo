@@ -1,8 +1,8 @@
 //
-//  HomeViewController.swift
+//  IndexViewController.swift
 //  WeiboDemo
 //
-//  Created by Zijie Jiang on 2020/5/11.
+//  Created by Zijie Jiang on 2020/5/12.
 //  Copyright © 2020 Zijie Jiang. All rights reserved.
 //
 
@@ -31,15 +31,5 @@ class IndexViewController: UIViewController {
         }
         titleViewIsPop = !titleViewIsPop
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

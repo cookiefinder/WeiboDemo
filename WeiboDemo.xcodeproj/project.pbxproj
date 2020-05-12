@@ -18,8 +18,8 @@
 		FD8C8D302469097C004317BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD8C8D2E2469097C004317BC /* LaunchScreen.storyboard */; };
 		FD8C8D3B2469097C004317BC /* WeiboDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D3A2469097C004317BC /* WeiboDemoTests.swift */; };
 		FD8C8D462469097C004317BC /* WeiboDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D452469097C004317BC /* WeiboDemoUITests.swift */; };
-		FD8C8D5624692D1E004317BC /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D5524692D1E004317BC /* IndexViewController.swift */; };
 		FD8C8D5824695188004317BC /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D5724695188004317BC /* TitleView.swift */; };
+		FD8C8D5A246A42D9004317BC /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D59246A42D9004317BC /* IndexViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +63,8 @@
 		FD8C8D412469097C004317BC /* WeiboDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeiboDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD8C8D452469097C004317BC /* WeiboDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeiboDemoUITests.swift; sourceTree = "<group>"; };
 		FD8C8D472469097C004317BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD8C8D5524692D1E004317BC /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
 		FD8C8D5724695188004317BC /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		FD8C8D59246A42D9004317BC /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,8 +150,8 @@
 				FD8C8D2C2469097C004317BC /* Assets.xcassets */,
 				FD8C8D2E2469097C004317BC /* LaunchScreen.storyboard */,
 				FD8C8D312469097C004317BC /* Info.plist */,
-				FD8C8D5524692D1E004317BC /* IndexViewController.swift */,
 				FD8C8D5724695188004317BC /* TitleView.swift */,
+				FD8C8D59246A42D9004317BC /* IndexViewController.swift */,
 			);
 			path = WeiboDemo;
 			sourceTree = "<group>";
@@ -470,8 +470,8 @@
 				FD8C8D2824690975004317BC /* ViewController.swift in Sources */,
 				FD8C8D2424690975004317BC /* AppDelegate.swift in Sources */,
 				FD8C8D2624690975004317BC /* SceneDelegate.swift in Sources */,
-				FD8C8D5624692D1E004317BC /* IndexViewController.swift in Sources */,
 				FD8C8D5824695188004317BC /* TitleView.swift in Sources */,
+				FD8C8D5A246A42D9004317BC /* IndexViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
