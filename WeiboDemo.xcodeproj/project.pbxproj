@@ -169,7 +169,6 @@
 		FD8C8D1724690975004317BC = {
 			isa = PBXGroup;
 			children = (
-				F4EFBD15246A628C002FE54C /* common */,
 				FD8C8D2224690975004317BC /* WeiboDemo */,
 				FD8C8D392469097C004317BC /* WeiboDemoTests */,
 				FD8C8D442469097C004317BC /* WeiboDemoUITests */,
@@ -196,6 +195,7 @@
 				FD8C8D2524690975004317BC /* SceneDelegate.swift */,
 				FD8C8D2924690975004317BC /* Main.storyboard */,
 				F4EFBD0824692E74002FE54C /* ViewController.swift */,
+				F4EFBD15246A628C002FE54C /* common */,
 				F4EFBD1224695504002FE54C /* Home */,
 				F4EFBD0724692E2F002FE54C /* Cell */,
 				FD8C8D2C2469097C004317BC /* Assets.xcassets */,
