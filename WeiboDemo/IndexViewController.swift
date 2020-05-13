@@ -14,7 +14,9 @@ class IndexViewController: UIViewController {
         
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            Api().authorize()
+            if !Api.hasLogin {
+                Api().authorize()
+            }
         }
     }
     

@@ -11,18 +11,23 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, WeiboSDKDelegate {
     
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        WeiboSDK.enableDebugMode(true)
+        WeiboSDK.registerApp("3528051087")
+        
+        Api.accessToken = Api.readTokenFromDisk()
+        Api.userID = Api.readUserIDFromDisk()
+        
+        return true
+    }
+    
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         WeiboSDK.handleOpen(url, delegate: self)
     }
     
     func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
         WeiboSDK.handleOpen(url, delegate: self)
-    }
-    
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        WeiboSDK.enableDebugMode(true)
-        WeiboSDK.registerApp("3528051087")
-        return true
     }
 
     // MARK: UISceneSession Lifecycle
@@ -43,6 +48,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WeiboSDKDelegate {
         print(response)
         if let response = response as? WBAuthorizeResponse {
             print(response.accessToken)
+            
+            Api.accessToken = response.accessToken
+            Api.userID = response.userID
+            
+            Api.saveTokenToDisk(token: response.accessToken)
+            Api.saveUserIDToDisk(userID: response.userID)
         }
     }
     
