@@ -29,6 +29,7 @@
 		FD8C8D5824695188004317BC /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D5724695188004317BC /* TitleView.swift */; };
 		FD8C8D5A246A42D9004317BC /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D59246A42D9004317BC /* IndexViewController.swift */; };
 		FD8C8D68246AA7AC004317BC /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D67246AA7AC004317BC /* Api.swift */; };
+		FD8C8D6B246B99CF004317BC /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D6A246B99CF004317BC /* R.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		FD8C8D59246A42D9004317BC /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
 		FD8C8D62246AA52C004317BC /* WeiboDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeiboDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		FD8C8D67246AA7AC004317BC /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		FD8C8D6A246B99CF004317BC /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 		FD8C8D1724690975004317BC = {
 			isa = PBXGroup;
 			children = (
+				FD8C8D6A246B99CF004317BC /* R.generated.swift */,
 				FD8C8D2224690975004317BC /* WeiboDemo */,
 				FD8C8D392469097C004317BC /* WeiboDemoTests */,
 				FD8C8D442469097C004317BC /* WeiboDemoUITests */,
@@ -235,6 +238,7 @@
 			buildConfigurationList = FD8C8D4A2469097C004317BC /* Build configuration list for PBXNativeTarget "WeiboDemo" */;
 			buildPhases = (
 				DC3B8F1088D33C7F2F8A4502 /* [CP] Check Pods Manifest.lock */,
+				FD8C8D69246B9618004317BC /* ShellScript */,
 				FD8C8D1C24690975004317BC /* Sources */,
 				FD8C8D1D24690975004317BC /* Frameworks */,
 				FD8C8D1E24690975004317BC /* Resources */,
@@ -515,6 +519,25 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WeiboDemo-WeiboDemoUITests/Pods-WeiboDemo-WeiboDemoUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FD8C8D69246B9618004317BC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -523,6 +546,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4EFBD1F246A6C56002FE54C /* DetailViewController.swift in Sources */,
+				FD8C8D6B246B99CF004317BC /* R.generated.swift in Sources */,
 				F4EFBD0A24692E74002FE54C /* ViewController.swift in Sources */,
 				FD8C8D2824690975004317BC /* HomeViewController.swift in Sources */,
 				FD8C8D2424690975004317BC /* AppDelegate.swift in Sources */,

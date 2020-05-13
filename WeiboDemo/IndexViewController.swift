@@ -8,7 +8,7 @@ class IndexViewController: UIViewController {
         super.viewDidLoad()
         
         titleView.translatesAutoresizingMaskIntoConstraints = false;
-        titleView.setTriangleImage(image: UIImage(named: "triangle-arrow-d"))
+        titleView.setTriangleImage(image: R.image.triangleArrowD())
         titleView.setVC(vc: self)
         self.navigationItem.titleView = titleView
         

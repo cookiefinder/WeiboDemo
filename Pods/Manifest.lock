@@ -9,6 +9,9 @@ PODS:
   - MJRefresh (3.4.3)
   - Nimble (8.0.7)
   - Quick (2.2.0)
+  - R.swift (5.2.2):
+    - R.swift.Library (~> 5.2.0)
+  - R.swift.Library (5.2.0)
   - SnapKit (5.0.1)
   - Weibo_SDK (3.2.7)
 
@@ -21,6 +24,7 @@ DEPENDENCIES:
   - MJRefresh
   - Nimble
   - Quick
+  - R.swift
   - SnapKit (~> 5.0.0)
   - Weibo_SDK (from `https://github.com/sinaweibosdk/weibo_ios_sdk.git`)
 
@@ -34,6 +38,8 @@ SPEC REPOS:
     - MJRefresh
     - Nimble
     - Quick
+    - R.swift
+    - R.swift.Library
     - SnapKit
 
 EXTERNAL SOURCES:
@@ -54,13 +60,11 @@ SPEC CHECKSUMS:
   MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
   Nimble: a73af6ecd4c9106f434f3d55fc54570be3739e0b
   Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
+  R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
+  R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Weibo_SDK: 5a4d08f7e1fedbb635435e4585c8c0439c7da089
 
-<<<<<<< HEAD
-PODFILE CHECKSUM: 72bcfe42e2016b82e2a0058c4563562e849ec8dc
-=======
-PODFILE CHECKSUM: a89af2bf84172e219516519965ef71a06b8e257c
->>>>>>> e9229d5abc069df885d164b64261a914499d529c
+PODFILE CHECKSUM: cb51665c5e0abb9f7ce6d07eac35dcc3fc4b2ba5
 
 COCOAPODS: 1.9.1
