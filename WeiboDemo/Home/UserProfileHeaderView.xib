@@ -53,37 +53,40 @@
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Ndh-2w-fO2" userLabel="Nickname Stack View">
-                    <rect key="frame" x="230.5" y="224" width="129" height="15"/>
+                    <rect key="frame" x="229" y="224" width="132" height="18"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserNickName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZZ-qe-IJn">
-                            <rect key="frame" x="0.0" y="0.0" width="110" height="15"/>
+                            <rect key="frame" x="0.0" y="0.0" width="110" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="18" id="eW4-Vk-31r"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="female" translatesAutoresizingMaskIntoConstraints="NO" id="TZ0-rP-XqW">
-                            <rect key="frame" x="114" y="0.0" width="15" height="15"/>
+                            <rect key="frame" x="114" y="0.0" width="18" height="18"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="15" id="0qC-Cu-ODw"/>
+                                <constraint firstAttribute="height" constant="18" id="0qC-Cu-ODw"/>
                                 <constraint firstAttribute="width" secondItem="TZ0-rP-XqW" secondAttribute="height" multiplier="1:1" id="aSV-QV-1GN"/>
                             </constraints>
                         </imageView>
                     </subviews>
                 </stackView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你还没有描述" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1b0-8q-1fu">
-                    <rect key="frame" x="243" y="249" width="104" height="20.5"/>
+                    <rect key="frame" x="243" y="252" width="104" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上海" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcF-eQ-z6Z">
-                    <rect key="frame" x="279.5" y="279.5" width="31" height="18"/>
+                    <rect key="frame" x="279.5" y="282.5" width="31" height="18"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="X5G-6I-gDm">
-                    <rect key="frame" x="175.5" y="307.5" width="239" height="18"/>
+                    <rect key="frame" x="175.5" y="310.5" width="239" height="18"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="JCF-eq-5WK">
                             <rect key="frame" x="0.0" y="0.0" width="69.5" height="18"/>
