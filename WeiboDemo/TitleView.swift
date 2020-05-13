@@ -9,10 +9,9 @@
 import UIKit
 
 
-
-
 class TitleView: UIView {
-    var titleRightImage = UIImageView()
+    private let triangleImage = UIImageView()
+    private var vc: IndexViewController?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -37,12 +36,26 @@ class TitleView: UIView {
        
         addSubview(titleLabel)
         
-        titleRightImage.frame = CGRect(x: 50, y: 5, width: 12, height: 10)
-        addSubview(titleRightImage)
+        triangleImage.frame = CGRect(x: 50, y: 5, width: 12, height: 10)
+        addSubview(triangleImage)
+        
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+        addGestureRecognizer(gesture)
     }
     
-    func setTriangleImage(image: UIImage) {
-        titleRightImage.image = image
+    func setTriangleImage(image: UIImage?) {
+        triangleImage.image = image
+    }
+    
+    @objc func handleTap(_ gesture: UITapGestureRecognizer) {
+        print(#function)
+        guard let vc = vc else { return }
+        let viewController = UIViewController()
+        vc.showPopover(vc: viewController, anchor: vc.titleView)
+    }
+    
+    func setVC(vc: IndexViewController) {
+        self.vc = vc
     }
     
 }

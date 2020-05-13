@@ -28,7 +28,7 @@
 		FD8C8D462469097C004317BC /* WeiboDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D452469097C004317BC /* WeiboDemoUITests.swift */; };
 		FD8C8D5824695188004317BC /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D5724695188004317BC /* TitleView.swift */; };
 		FD8C8D5A246A42D9004317BC /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D59246A42D9004317BC /* IndexViewController.swift */; };
-		FD8C8D5F246A4B0A004317BC /* TestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D5E246A4B0A004317BC /* TestApi.swift */; };
+		FD8C8D68246AA7AC004317BC /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D67246AA7AC004317BC /* Api.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +82,8 @@
 		FD8C8D472469097C004317BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD8C8D5724695188004317BC /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		FD8C8D59246A42D9004317BC /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
-		FD8C8D5E246A4B0A004317BC /* TestApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApi.swift; sourceTree = "<group>"; };
+		FD8C8D62246AA52C004317BC /* WeiboDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeiboDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		FD8C8D67246AA7AC004317BC /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,7 +192,6 @@
 		FD8C8D2224690975004317BC /* WeiboDemo */ = {
 			isa = PBXGroup;
 			children = (
-				FD8C8D5D246A4ADE004317BC /* Api */,
 				FD8C8D2324690975004317BC /* AppDelegate.swift */,
 				FD8C8D2524690975004317BC /* SceneDelegate.swift */,
 				FD8C8D2924690975004317BC /* Main.storyboard */,
@@ -203,6 +203,8 @@
 				FD8C8D312469097C004317BC /* Info.plist */,
 				FD8C8D5724695188004317BC /* TitleView.swift */,
 				FD8C8D59246A42D9004317BC /* IndexViewController.swift */,
+				FD8C8D62246AA52C004317BC /* WeiboDemo-Bridging-Header.h */,
+				FD8C8D67246AA7AC004317BC /* Api.swift */,
 			);
 			path = WeiboDemo;
 			sourceTree = "<group>";
@@ -223,14 +225,6 @@
 				FD8C8D472469097C004317BC /* Info.plist */,
 			);
 			path = WeiboDemoUITests;
-			sourceTree = "<group>";
-		};
-		FD8C8D5D246A4ADE004317BC /* Api */ = {
-			isa = PBXGroup;
-			children = (
-				FD8C8D5E246A4B0A004317BC /* TestApi.swift */,
-			);
-			path = Api;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +303,7 @@
 				TargetAttributes = {
 					FD8C8D1F24690975004317BC = {
 						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1140;
 					};
 					FD8C8D352469097C004317BC = {
 						CreatedOnToolsVersion = 11.4.1;
@@ -538,8 +533,8 @@
 				FD8C8D2624690975004317BC /* SceneDelegate.swift in Sources */,
 				F4EFBD21246A71FF002FE54C /* UserProfileHeaderView.swift in Sources */,
 				FD8C8D5824695188004317BC /* TitleView.swift in Sources */,
+				FD8C8D68246AA7AC004317BC /* Api.swift in Sources */,
 				FD8C8D5A246A42D9004317BC /* IndexViewController.swift in Sources */,
-				FD8C8D5F246A4B0A004317BC /* TestApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,6 +708,7 @@
 			baseConfigurationReference = 54BF742B48CB8CF4BBD1E7EB /* Pods-WeiboDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z2LP955RX5;
 				INFOPLIST_FILE = WeiboDemo/Info.plist;
@@ -720,8 +716,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Weibo.WeiboDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = xin.leiguang.wbdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WeiboDemo/WeiboDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -732,6 +730,7 @@
 			baseConfigurationReference = C17B0A3A900AB59FB818A7FC /* Pods-WeiboDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z2LP955RX5;
 				INFOPLIST_FILE = WeiboDemo/Info.plist;
@@ -739,8 +738,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Weibo.WeiboDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = xin.leiguang.wbdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WeiboDemo/WeiboDemo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

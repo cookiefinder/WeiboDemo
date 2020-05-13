@@ -9,12 +9,19 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
+class AppDelegate: UIResponder, UIApplicationDelegate, WeiboSDKDelegate {
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        WeiboSDK.handleOpen(url, delegate: self)
+    }
+    
+    func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
+        WeiboSDK.handleOpen(url, delegate: self)
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        WeiboSDK.enableDebugMode(true)
+        WeiboSDK.registerApp("3528051087")
         return true
     }
 
@@ -30,6 +37,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+    
+    func didReceiveWeiboResponse(_ response: WBBaseResponse!) {
+        print(response)
+        if let response = response as? WBAuthorizeResponse {
+            print(response.accessToken)
+        }
+    }
+    
+    func didReceiveWeiboRequest(_ request: WBBaseRequest!) {
+        
     }
 
 
