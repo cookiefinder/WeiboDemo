@@ -30,6 +30,11 @@
 		FD8C8D5A246A42D9004317BC /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D59246A42D9004317BC /* IndexViewController.swift */; };
 		FD8C8D68246AA7AC004317BC /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D67246AA7AC004317BC /* Api.swift */; };
 		FD8C8D6B246B99CF004317BC /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D6A246B99CF004317BC /* R.generated.swift */; };
+		FD8C8D6E246B9C4B004317BC /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D6D246B9C4B004317BC /* TitleViewController.swift */; };
+		FD8C8D70246B9E11004317BC /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D6F246B9E11004317BC /* TitleTableViewCell.swift */; };
+		FD8C8D72246BE4AA004317BC /* AvatarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D71246BE4AA004317BC /* AvatarViewController.swift */; };
+		FD8C8D74246BE4C3004317BC /* AvatarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D73246BE4C3004317BC /* AvatarTableViewCell.swift */; };
+		FD8C8D77246BE5FB004317BC /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D76246BE5FB004317BC /* UserInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +91,11 @@
 		FD8C8D62246AA52C004317BC /* WeiboDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeiboDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		FD8C8D67246AA7AC004317BC /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		FD8C8D6A246B99CF004317BC /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		FD8C8D6D246B9C4B004317BC /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
+		FD8C8D6F246B9E11004317BC /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
+		FD8C8D71246BE4AA004317BC /* AvatarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarViewController.swift; sourceTree = "<group>"; };
+		FD8C8D73246BE4C3004317BC /* AvatarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarTableViewCell.swift; sourceTree = "<group>"; };
+		FD8C8D76246BE5FB004317BC /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +204,8 @@
 		FD8C8D2224690975004317BC /* WeiboDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FD8C8D75246BE5EF004317BC /* Model */,
+				FD8C8D6C246B9BED004317BC /* Popover */,
 				FD8C8D2324690975004317BC /* AppDelegate.swift */,
 				FD8C8D2524690975004317BC /* SceneDelegate.swift */,
 				FD8C8D2924690975004317BC /* Main.storyboard */,
@@ -228,6 +240,25 @@
 				FD8C8D472469097C004317BC /* Info.plist */,
 			);
 			path = WeiboDemoUITests;
+			sourceTree = "<group>";
+		};
+		FD8C8D6C246B9BED004317BC /* Popover */ = {
+			isa = PBXGroup;
+			children = (
+				FD8C8D6D246B9C4B004317BC /* TitleViewController.swift */,
+				FD8C8D6F246B9E11004317BC /* TitleTableViewCell.swift */,
+				FD8C8D71246BE4AA004317BC /* AvatarViewController.swift */,
+				FD8C8D73246BE4C3004317BC /* AvatarTableViewCell.swift */,
+			);
+			path = Popover;
+			sourceTree = "<group>";
+		};
+		FD8C8D75246BE5EF004317BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FD8C8D76246BE5FB004317BC /* UserInfo.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -545,6 +576,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD8C8D77246BE5FB004317BC /* UserInfo.swift in Sources */,
+				FD8C8D74246BE4C3004317BC /* AvatarTableViewCell.swift in Sources */,
 				F4EFBD1F246A6C56002FE54C /* DetailViewController.swift in Sources */,
 				FD8C8D6B246B99CF004317BC /* R.generated.swift in Sources */,
 				F4EFBD0A24692E74002FE54C /* ViewController.swift in Sources */,
@@ -553,12 +586,15 @@
 				F4EFBD19246A684B002FE54C /* PagingViewTableHeaderView.swift in Sources */,
 				F4EFBD1B246A6959002FE54C /* ListViewController.swift in Sources */,
 				F4EFBD1D246A6BF2002FE54C /* UIWindow+JXSafeArea.swift in Sources */,
+				FD8C8D70246B9E11004317BC /* TitleTableViewCell.swift in Sources */,
 				F4EFBD17246A62CA002FE54C /* BaseViewController.swift in Sources */,
 				FD8C8D2624690975004317BC /* SceneDelegate.swift in Sources */,
 				F4EFBD21246A71FF002FE54C /* UserProfileHeaderView.swift in Sources */,
+				FD8C8D72246BE4AA004317BC /* AvatarViewController.swift in Sources */,
 				FD8C8D5824695188004317BC /* TitleView.swift in Sources */,
 				FD8C8D68246AA7AC004317BC /* Api.swift in Sources */,
 				FD8C8D5A246A42D9004317BC /* IndexViewController.swift in Sources */,
+				FD8C8D6E246B9C4B004317BC /* TitleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
