@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WeiboSDKDelegate {
         WeiboSDK.enableDebugMode(true)
         WeiboSDK.registerApp("3528051087")
         
-        Api.accessToken = Api.readTokenFromDisk()
-        Api.userID = Api.readUserIDFromDisk()
+        LoginManager.accessToken = LoginManager.readTokenFromDisk()
+        LoginManager.userID = LoginManager.readUserIDFromDisk()
         
         return true
     }
@@ -49,11 +49,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WeiboSDKDelegate {
         if let response = response as? WBAuthorizeResponse {
             print(response.accessToken)
             
-            Api.accessToken = response.accessToken
-            Api.userID = response.userID
+            LoginManager.accessToken = response.accessToken
+            LoginManager.userID = response.userID
             
-            Api.saveTokenToDisk(token: response.accessToken)
-            Api.saveUserIDToDisk(userID: response.userID)
+            LoginManager.saveTokenToDisk(token: response.accessToken)
+            LoginManager.saveUserIDToDisk(userID: response.userID)
         }
     }
     

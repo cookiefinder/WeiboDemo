@@ -1,5 +1,5 @@
 //
-//  Api.swift
+//  LoginManager.swift
 //  WeiboDemo
 //
 //  Created by Zijie Jiang on 2020/5/12.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Api {
+class LoginManager {
     static var accessToken: String?
     static var userID: String?
     static var hasLogin: Bool {

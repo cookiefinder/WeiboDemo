@@ -11,7 +11,7 @@ import Alamofire
 
 
 protocol UserProfileApiProtocol {
-    func userProfile(completion: @escaping (Result<UserProfileApi.Response, Api.ApiError>) -> Void)
+    func userProfile(completion: @escaping (Result<UserProfileApi.Response, LoginManager.ApiError>) -> Void)
 }
 
 class UserProfileApi: UserProfileApiProtocol {
@@ -40,17 +40,17 @@ class UserProfileApi: UserProfileApiProtocol {
         }
     }
     
-    func userProfile(completion: @escaping (Result<UserProfileApi.Response, Api.ApiError>) -> Void) {
+    func userProfile(completion: @escaping (Result<UserProfileApi.Response, LoginManager.ApiError>) -> Void) {
         AF.request(url,
                    method: .get,
-                   parameters: Login(access_token: Api.accessToken ?? "", uid: Api.userID ?? ""))
+                   parameters: Login(access_token: LoginManager.accessToken ?? "", uid: LoginManager.userID ?? ""))
             .responseDecodable(of: UserProfileApi.Response.self) { (response) in
             switch response.result {
             case .success(let value):
                 completion(.success(value))
             case .failure(let error):
                 print(error)
-                completion(.failure(Api.ApiError(message: error.localizedDescription)))
+                completion(.failure(LoginManager.ApiError(message: error.localizedDescription)))
             }
         }
     }

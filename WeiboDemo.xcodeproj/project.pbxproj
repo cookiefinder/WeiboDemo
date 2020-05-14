@@ -31,7 +31,7 @@
 		FD8C8D462469097C004317BC /* WeiboDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D452469097C004317BC /* WeiboDemoUITests.swift */; };
 		FD8C8D5824695188004317BC /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D5724695188004317BC /* TitleView.swift */; };
 		FD8C8D5A246A42D9004317BC /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D59246A42D9004317BC /* IndexViewController.swift */; };
-		FD8C8D68246AA7AC004317BC /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D67246AA7AC004317BC /* Api.swift */; };
+		FD8C8D68246AA7AC004317BC /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D67246AA7AC004317BC /* LoginManager.swift */; };
 		FD8C8D6B246B99CF004317BC /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D6A246B99CF004317BC /* R.generated.swift */; };
 		FD8C8D6E246B9C4B004317BC /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D6D246B9C4B004317BC /* TitleViewController.swift */; };
 		FD8C8D70246B9E11004317BC /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D6F246B9E11004317BC /* TitleTableViewCell.swift */; };
@@ -95,7 +95,7 @@
 		FD8C8D5724695188004317BC /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		FD8C8D59246A42D9004317BC /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
 		FD8C8D62246AA52C004317BC /* WeiboDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeiboDemo-Bridging-Header.h"; sourceTree = "<group>"; };
-		FD8C8D67246AA7AC004317BC /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		FD8C8D67246AA7AC004317BC /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		FD8C8D6A246B99CF004317BC /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		FD8C8D6D246B9C4B004317BC /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
 		FD8C8D6F246B9E11004317BC /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
@@ -226,7 +226,7 @@
 				FD8C8D5724695188004317BC /* TitleView.swift */,
 				FD8C8D59246A42D9004317BC /* IndexViewController.swift */,
 				FD8C8D62246AA52C004317BC /* WeiboDemo-Bridging-Header.h */,
-				FD8C8D67246AA7AC004317BC /* Api.swift */,
+				FD8C8D67246AA7AC004317BC /* LoginManager.swift */,
 				F4EFBD2B246BAAD4002FE54C /* UserProfileApi.swift */,
 				F4EFBD2F246BB8A8002FE54C /* Utils */,
 			);
@@ -603,7 +603,7 @@
 				F4EFBD21246A71FF002FE54C /* UserProfileHeaderView.swift in Sources */,
 				FD8C8D72246BE4AA004317BC /* AvatarViewController.swift in Sources */,
 				FD8C8D5824695188004317BC /* TitleView.swift in Sources */,
-				FD8C8D68246AA7AC004317BC /* Api.swift in Sources */,
+				FD8C8D68246AA7AC004317BC /* LoginManager.swift in Sources */,
 				F4EFBD2A246BA21A002FE54C /* HomeViewModel.swift in Sources */,
 				FD8C8D5A246A42D9004317BC /* IndexViewController.swift in Sources */,
 				FD8C8D6E246B9C4B004317BC /* TitleViewController.swift in Sources */,

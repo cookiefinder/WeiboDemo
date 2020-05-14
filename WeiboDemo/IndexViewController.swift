@@ -21,8 +21,8 @@ class IndexViewController: UIViewController {
         }
         navigationItem.titleView = titleView
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            if !Api.hasLogin {
-                Api().authorize()
+            if !LoginManager.hasLogin {
+                LoginManager().authorize()
             }
         }
     }
