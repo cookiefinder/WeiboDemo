@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="226" id="KGk-i7-Jjw" customClass="WeiboListViewCell" customModule="WeiboDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="329" height="226"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="329" height="226"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rUM-P8-hyk">
+                        <rect key="frame" x="14" y="14" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="6Ck-ZJ-5Vi"/>
+                            <constraint firstAttribute="height" constant="40" id="nfO-B0-FF1"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="userNickName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9O-Ju-zls">
+                        <rect key="frame" x="68" y="14" width="101.5" height="17"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfH-UV-wRP">
+                        <rect key="frame" x="68" y="55" width="52.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="CFu-1K-OIz">
+                        <rect key="frame" x="68" y="81" width="247" height="128"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ycr-bA-Jl5">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TimeLine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXH-MH-j4y">
+                        <rect key="frame" x="260.5" y="14" width="54.5" height="16"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="lXH-MH-j4y" secondAttribute="trailing" constant="14" id="025-Ie-0jY"/>
+                    <constraint firstItem="rUM-P8-hyk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="4W8-Bg-QAl"/>
+                    <constraint firstItem="zfH-UV-wRP" firstAttribute="top" secondItem="V9O-Ju-zls" secondAttribute="bottom" constant="24" id="Fqy-Ue-LtI"/>
+                    <constraint firstItem="CFu-1K-OIz" firstAttribute="leading" secondItem="zfH-UV-wRP" secondAttribute="leading" id="TuK-xx-nWP"/>
+                    <constraint firstItem="CFu-1K-OIz" firstAttribute="top" secondItem="zfH-UV-wRP" secondAttribute="bottom" constant="8" id="Uo9-97-zHb"/>
+                    <constraint firstItem="lXH-MH-j4y" firstAttribute="top" secondItem="V9O-Ju-zls" secondAttribute="top" id="ZlS-90-aVm"/>
+                    <constraint firstItem="V9O-Ju-zls" firstAttribute="leading" secondItem="rUM-P8-hyk" secondAttribute="trailing" constant="14" id="c0b-ls-bxY"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="CFu-1K-OIz" secondAttribute="bottom" constant="6" id="g0z-ag-GK2"/>
+                    <constraint firstItem="V9O-Ju-zls" firstAttribute="top" secondItem="rUM-P8-hyk" secondAttribute="top" id="jpv-tK-RJr"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zfH-UV-wRP" secondAttribute="trailing" constant="14" id="m0G-Y3-eYo"/>
+                    <constraint firstItem="zfH-UV-wRP" firstAttribute="leading" secondItem="V9O-Ju-zls" secondAttribute="leading" id="m6t-g3-ytq"/>
+                    <constraint firstItem="rUM-P8-hyk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="ro6-kv-x6j"/>
+                    <constraint firstAttribute="trailing" secondItem="CFu-1K-OIz" secondAttribute="trailing" constant="14" id="xX0-SA-fP4"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="userImageView" destination="rUM-P8-hyk" id="uPc-5o-dWj"/>
+                <outlet property="userScreenNameLabel" destination="V9O-Ju-zls" id="ncQ-Jm-xQT"/>
+                <outlet property="weiboContentLabel" destination="zfH-UV-wRP" id="hcQ-TR-lUp"/>
+                <outlet property="weiboTimeLineLabel" destination="lXH-MH-j4y" id="UX7-uv-PGR"/>
+            </connections>
+            <point key="canvasLocation" x="-205.07246376811597" y="53.571428571428569"/>
+        </tableViewCell>
+    </objects>
+</document>

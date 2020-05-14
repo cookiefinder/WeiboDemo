@@ -10,6 +10,8 @@
 		5F7D2F5DADA4AC63D43A78FF /* Pods_WeiboDemo_WeiboDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19038C85678993A5EE80002 /* Pods_WeiboDemo_WeiboDemoUITests.framework */; };
 		B64A60FD867565C63798394A /* Pods_WeiboDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F3B4B00502744F7AEB540E3 /* Pods_WeiboDemoTests.framework */; };
 		EF4A34D935FA382EDE5893E3 /* Pods_WeiboDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FDBE6B49BA9D63C81F3BDC8 /* Pods_WeiboDemo.framework */; };
+		F4DD07A7246D156600D5E452 /* WeiboListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DD07A5246D156600D5E452 /* WeiboListViewCell.swift */; };
+		F4DD07A8246D156600D5E452 /* WeiboListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4DD07A6246D156600D5E452 /* WeiboListViewCell.xib */; };
 		F4EFBD0A24692E74002FE54C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFBD0824692E74002FE54C /* ViewController.swift */; };
 		F4EFBD1B246A6959002FE54C /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFBD1A246A6959002FE54C /* ListViewController.swift */; };
 		F4EFBD1D246A6BF2002FE54C /* UIWindow+JXSafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFBD1C246A6BF2002FE54C /* UIWindow+JXSafeArea.swift */; };
@@ -64,6 +66,8 @@
 		C5E4746D20C539F676C94AE8 /* Pods-WeiboDemo-WeiboDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeiboDemo-WeiboDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-WeiboDemo-WeiboDemoUITests/Pods-WeiboDemo-WeiboDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D11520A01929A8F55E3FA47B /* Pods-WeiboDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeiboDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-WeiboDemoTests/Pods-WeiboDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DF94BB1095CF65582030338F /* Pods-WeiboDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeiboDemoTests.release.xcconfig"; path = "Target Support Files/Pods-WeiboDemoTests/Pods-WeiboDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		F4DD07A5246D156600D5E452 /* WeiboListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeiboListViewCell.swift; sourceTree = "<group>"; };
+		F4DD07A6246D156600D5E452 /* WeiboListViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeiboListViewCell.xib; sourceTree = "<group>"; };
 		F4EFBD0824692E74002FE54C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Cell/ViewController.swift; sourceTree = "<group>"; };
 		F4EFBD1A246A6959002FE54C /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		F4EFBD1C246A6BF2002FE54C /* UIWindow+JXSafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+JXSafeArea.swift"; sourceTree = "<group>"; };
@@ -168,6 +172,8 @@
 				F4EFBD1A246A6959002FE54C /* ListViewController.swift */,
 				F4EFBD1C246A6BF2002FE54C /* UIWindow+JXSafeArea.swift */,
 				F4EFBD1E246A6C56002FE54C /* DetailViewController.swift */,
+				F4DD07A5246D156600D5E452 /* WeiboListViewCell.swift */,
+				F4DD07A6246D156600D5E452 /* WeiboListViewCell.xib */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -379,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD8C8D302469097C004317BC /* LaunchScreen.storyboard in Resources */,
+				F4DD07A8246D156600D5E452 /* WeiboListViewCell.xib in Resources */,
 				F4EFBD23246A7224002FE54C /* UserProfileHeaderView.xib in Resources */,
 				FD8C8D2D2469097C004317BC /* Assets.xcassets in Resources */,
 				FD8C8D2B24690975004317BC /* Main.storyboard in Resources */,
@@ -585,6 +592,7 @@
 				F4EFBD2E246BAC19002FE54C /* Login.swift in Sources */,
 				FD8C8D6B246B99CF004317BC /* R.generated.swift in Sources */,
 				F4EFBD0A24692E74002FE54C /* ViewController.swift in Sources */,
+				F4DD07A7246D156600D5E452 /* WeiboListViewCell.swift in Sources */,
 				FD8C8D2824690975004317BC /* HomeViewController.swift in Sources */,
 				FD8C8D2424690975004317BC /* AppDelegate.swift in Sources */,
 				F4EFBD1B246A6959002FE54C /* ListViewController.swift in Sources */,
