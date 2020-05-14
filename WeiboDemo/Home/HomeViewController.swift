@@ -14,6 +14,7 @@ extension JXPagingListContainerView: JXSegmentedViewListContainer {}
 
 protocol HomeViewControllerProtocol: class {
     func showUserProfile(model: UserProfileApi.Response)
+    func showUserWeiboContent(model: WeiboContent)
     func showAlert(message: String)
 }
 
@@ -28,6 +29,7 @@ class HomeViewController: UIViewController {
     var isNeedHeader = false
     var isNeedFooter = false
     var viewModel: HomeViewModelProtocol!
+    var userWeiboList: UserWeiboListModelProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +74,9 @@ class HomeViewController: UIViewController {
         
         viewModel = HomeViewModel(viewController: self)
         viewModel.loadData()
+        
+        userWeiboList = UserWeiboListModel(viewController: self)
+        userWeiboList.loadData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -157,6 +162,9 @@ extension HomeViewController: JXPagingMainTableViewGestureDelegate {
 extension HomeViewController: HomeViewControllerProtocol {
     func showUserProfile(model: UserProfileApi.Response) {
         userHeaderView.configure(model: model)
+    }
+    
+    func showUserWeiboContent(model: WeiboContent) {
     }
 
     func showAlert(message: String) {

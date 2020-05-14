@@ -10,10 +10,10 @@ import Foundation
 import Alamofire
 
 
-protocol UserWeiboListProtocol {
+protocol UserWeiboListApiProtocol {
     func userWeiboList(completion: @escaping (Result<WeiboContent, LoginManager.ApiError>) -> Void)
 }
-class UserWeiboList: UserWeiboListProtocol {
+class UserWeiboListApi: UserWeiboListApiProtocol {
     let url = "https://api.weibo.com/2/statuses/user_timeline.json"
     
     func userWeiboList(completion: @escaping (Result<WeiboContent, LoginManager.ApiError>) -> Void) {

@@ -12,8 +12,9 @@
 		EF4A34D935FA382EDE5893E3 /* Pods_WeiboDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FDBE6B49BA9D63C81F3BDC8 /* Pods_WeiboDemo.framework */; };
 		F4DD07A7246D156600D5E452 /* WeiboListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DD07A5246D156600D5E452 /* WeiboListViewCell.swift */; };
 		F4DD07A8246D156600D5E452 /* WeiboListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4DD07A6246D156600D5E452 /* WeiboListViewCell.xib */; };
-		F4DD07AB246D20DE00D5E452 /* userWeiboList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DD07AA246D20DE00D5E452 /* userWeiboList.swift */; };
+		F4DD07AB246D20DE00D5E452 /* UserWeiboListApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DD07AA246D20DE00D5E452 /* UserWeiboListApi.swift */; };
 		F4DD07AD246D21B600D5E452 /* WeiboContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DD07AC246D21B600D5E452 /* WeiboContent.swift */; };
+		F4DD07AF246D2B7800D5E452 /* UserWeiboListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DD07AE246D2B7800D5E452 /* UserWeiboListModel.swift */; };
 		F4EFBD0A24692E74002FE54C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFBD0824692E74002FE54C /* ViewController.swift */; };
 		F4EFBD1B246A6959002FE54C /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFBD1A246A6959002FE54C /* ListViewController.swift */; };
 		F4EFBD1D246A6BF2002FE54C /* UIWindow+JXSafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFBD1C246A6BF2002FE54C /* UIWindow+JXSafeArea.swift */; };
@@ -70,8 +71,9 @@
 		DF94BB1095CF65582030338F /* Pods-WeiboDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeiboDemoTests.release.xcconfig"; path = "Target Support Files/Pods-WeiboDemoTests/Pods-WeiboDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		F4DD07A5246D156600D5E452 /* WeiboListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeiboListViewCell.swift; sourceTree = "<group>"; };
 		F4DD07A6246D156600D5E452 /* WeiboListViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeiboListViewCell.xib; sourceTree = "<group>"; };
-		F4DD07AA246D20DE00D5E452 /* userWeiboList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userWeiboList.swift; sourceTree = "<group>"; };
+		F4DD07AA246D20DE00D5E452 /* UserWeiboListApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWeiboListApi.swift; sourceTree = "<group>"; };
 		F4DD07AC246D21B600D5E452 /* WeiboContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeiboContent.swift; sourceTree = "<group>"; };
+		F4DD07AE246D2B7800D5E452 /* UserWeiboListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWeiboListModel.swift; sourceTree = "<group>"; };
 		F4EFBD0824692E74002FE54C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Cell/ViewController.swift; sourceTree = "<group>"; };
 		F4EFBD1A246A6959002FE54C /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		F4EFBD1C246A6BF2002FE54C /* UIWindow+JXSafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+JXSafeArea.swift"; sourceTree = "<group>"; };
@@ -163,7 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				F4EFBD2B246BAAD4002FE54C /* UserProfileApi.swift */,
-				F4DD07AA246D20DE00D5E452 /* userWeiboList.swift */,
+				F4DD07AA246D20DE00D5E452 /* UserWeiboListApi.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -175,6 +177,7 @@
 				F4EFBD20246A71FF002FE54C /* UserProfileHeaderView.swift */,
 				F4EFBD22246A7224002FE54C /* UserProfileHeaderView.xib */,
 				F4EFBD29246BA21A002FE54C /* HomeViewModel.swift */,
+				F4DD07AE246D2B7800D5E452 /* UserWeiboListModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -603,7 +606,7 @@
 				FD8C8D77246BE5FB004317BC /* UserInfo.swift in Sources */,
 				FD8C8D74246BE4C3004317BC /* AvatarTableViewCell.swift in Sources */,
 				F4EFBD1F246A6C56002FE54C /* DetailViewController.swift in Sources */,
-				F4DD07AB246D20DE00D5E452 /* userWeiboList.swift in Sources */,
+				F4DD07AB246D20DE00D5E452 /* UserWeiboListApi.swift in Sources */,
 				F4EFBD2E246BAC19002FE54C /* Login.swift in Sources */,
 				FD8C8D6B246B99CF004317BC /* R.generated.swift in Sources */,
 				F4EFBD0A24692E74002FE54C /* ViewController.swift in Sources */,
@@ -613,6 +616,7 @@
 				FD8C8D2424690975004317BC /* AppDelegate.swift in Sources */,
 				F4EFBD1B246A6959002FE54C /* ListViewController.swift in Sources */,
 				F4EFBD1D246A6BF2002FE54C /* UIWindow+JXSafeArea.swift in Sources */,
+				F4DD07AF246D2B7800D5E452 /* UserWeiboListModel.swift in Sources */,
 				FD8C8D70246B9E11004317BC /* TitleTableViewCell.swift in Sources */,
 				F4EFBD2C246BAAD4002FE54C /* UserProfileApi.swift in Sources */,
 				FD8C8D2624690975004317BC /* SceneDelegate.swift in Sources */,

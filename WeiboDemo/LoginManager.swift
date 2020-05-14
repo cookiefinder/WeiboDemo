@@ -34,7 +34,7 @@ class LoginManager {
     func authorize() {
         let request = WBAuthorizeRequest()
         request.redirectURI = "https://api.weibo.com/oauth2/default.html"
-        request.scope = ""
+        request.scope = "all"
         WeiboSDK.send(request)
     }
     
