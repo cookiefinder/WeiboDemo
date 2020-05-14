@@ -7,13 +7,16 @@
 //
 
 import UIKit
-
+import SnapKit
 
 class TitleView: UIView {
     private let triangleImage = UIImageView()
-    private var vc: IndexViewController?
     private let titleLabel = UILabel()
-    private var viewController: TitleViewController?
+    var didTap: (() -> Void)?
+    
+    override var intrinsicContentSize: CGSize {
+        return CGSize(width: 80, height: 20)
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,18 +29,22 @@ class TitleView: UIView {
         commonInit()
         
     }
-    override var intrinsicContentSize: CGSize {
-        return CGSize(width: 80, height: 20)
-    }
     
     private func commonInit() {
-        titleLabel.text = "主页"
-        titleLabel.frame = CGRect(x: 0, y: 0, width: 80, height: 20)
+        titleLabel.text = TitleViewController.topics[0]
         titleLabel.textAlignment = .center
         addSubview(titleLabel)
+        titleLabel.snp.makeConstraints { (make) in
+            make.centerX.equalTo(self)
+            make.centerY.equalTo(self)
+        }
         
-        triangleImage.frame = CGRect(x: 80, y: 5, width: 12, height: 10)
         addSubview(triangleImage)
+        triangleImage.snp.makeConstraints { (make) in
+            make.centerY.equalTo(self)
+            make.left.equalTo(titleLabel.snp.right).offset(5)
+            make.size.equalTo(CGSize(width: 12, height: 10))
+        }
         
         let gesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         addGestureRecognizer(gesture)
@@ -48,25 +55,15 @@ class TitleView: UIView {
     }
     
     @objc func handleTap(_ gesture: UITapGestureRecognizer) {
-        print(#function)
-        guard let vc = vc else { return }
-        let sb = UIStoryboard(name: "Main", bundle: Bundle.main)
-        self.viewController = sb.instantiateViewController(withIdentifier: "TitleViewController") as? TitleViewController
-        self.viewController?.setTitleView(titleView: self)
-        vc.showPopover(vc: self.viewController ?? UIViewController(), anchor: vc.titleView)
-    }
-    
-    func setVC(vc: IndexViewController) {
-        self.vc = vc
+        didTap?()
     }
     
     func updateCurrentTopic(topic: String) {
-        self.titleLabel.text = topic
-        self.viewController?.dismiss(animated: false, completion: nil)
+        titleLabel.text = topic
         triangleImage.image = R.image.triangleArrowD()
     }
     
-    func getTopic() -> String? {
+    func getCurrentTopic() -> String? {
         self.titleLabel.text
     }
 }

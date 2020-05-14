@@ -9,25 +9,11 @@
 import UIKit
 
 class AvatarViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
 extension AvatarViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         2
@@ -38,5 +24,11 @@ extension AvatarViewController: UITableViewDataSource {
         let userInfo = UserInfo(avatarImage: "http://xxx", name: "Admin")
         cell.config(with: userInfo, isCheck: true, isLast: indexPath.row == 1)
         return cell
+    }
+}
+
+extension AvatarViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

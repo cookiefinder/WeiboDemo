@@ -1,33 +1,41 @@
 import UIKit
 
 class IndexViewController: UIViewController {
-
-    let titleView = TitleView()
+    private let titleView = TitleView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         titleView.translatesAutoresizingMaskIntoConstraints = false;
         titleView.setTriangleImage(image: R.image.triangleArrowD())
-        titleView.setVC(vc: self)
-        self.navigationItem.titleView = titleView
-        
-        
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-//            Api().authorize()
-//        }
+        titleView.didTap = { [weak self] in
+            guard let self = self else { return }
+            let vc = R.storyboard.main.titleViewController()!
+            vc.getCurrentTopic = {
+                self.titleView.getCurrentTopic()!
+            }
+            vc.updateCurrentTopic = {(topic: String) -> Void in
+                self.titleView.updateCurrentTopic(topic: topic)
+            }
+            self.showPopover(vc: vc, anchor: self.titleView)
+        }
+        navigationItem.titleView = titleView
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            if !Api.hasLogin {
+                Api().authorize()
+            }
+        }
     }
     
     @IBAction func handleClickAvatarImage(_ sender: Any) {
-        let sb = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let vc = sb.instantiateViewController(withIdentifier: "AvatarViewController") as! AvatarViewController
+        let vc = R.storyboard.main.avatarViewController()!
         showPopover(vc: vc, anchor: navigationItem.leftBarButtonItem ?? UIBarButtonItem())
     }
     
     func showPopover(vc: UIViewController, anchor: Any) {
-//        vc.view.backgroundColor = UIColor.orange
         vc.modalPresentationStyle = .popover
-        // popVC.isModalInPresentation = true
+        vc.popoverPresentationController?.delegate = self
+        vc.popoverPresentationController?.permittedArrowDirections = .any
         if let anchor = anchor as? UIView {
             vc.popoverPresentationController?.sourceView = anchor
             vc.preferredContentSize = CGSize(width: 200, height: 300)
@@ -35,11 +43,8 @@ class IndexViewController: UIViewController {
             vc.popoverPresentationController?.barButtonItem = anchor
             vc.preferredContentSize = CGSize(width: 300, height: 80)
         }
-        vc.popoverPresentationController?.delegate = self
-        vc.popoverPresentationController?.permittedArrowDirections = .any
-        self.present(vc, animated: true, completion: nil)
+        present(vc, animated: true, completion: nil)
     }
-    
 }
 
 extension IndexViewController: UIPopoverPresentationControllerDelegate {
