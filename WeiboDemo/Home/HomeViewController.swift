@@ -14,6 +14,7 @@ extension JXPagingListContainerView: JXSegmentedViewListContainer {}
 
 protocol HomeViewControllerProtocol: class {
     func showUserProfile(model: UserProfileApi.Response)
+    func showAlert(message: String)
 }
 
 class HomeViewController: UIViewController {
@@ -156,6 +157,13 @@ extension HomeViewController: JXPagingMainTableViewGestureDelegate {
 extension HomeViewController: HomeViewControllerProtocol {
     func showUserProfile(model: UserProfileApi.Response) {
         userHeaderView.configure(model: model)
+    }
+
+    func showAlert(message: String) {
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "好的", style: .default, handler: nil)
+        alert.addAction(ok)
+        present(alert, animated: true, completion: nil)
     }
 }
 

@@ -39,8 +39,7 @@ class HomeViewModel: HomeViewModelProtocol {
 //                self.viewController.scrollToTop()
                 
             case .failure(let error):
-                return
-//                self.viewController.showAlert(message: error.message)
+                return self.viewController.showAlert(message: error.message)
             }
         }
     }
