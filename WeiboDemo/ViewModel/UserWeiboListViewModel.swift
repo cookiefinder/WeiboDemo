@@ -12,7 +12,7 @@ protocol UserWeiboListModelProtocol {
     func loadData()
 }
 
-class UserWeiboListModel: UserWeiboListModelProtocol {
+class UserWeiboListViewModel: UserWeiboListModelProtocol {
     unowned let viewController: HomeViewControllerProtocol
     
     init(viewController: HomeViewControllerProtocol) {

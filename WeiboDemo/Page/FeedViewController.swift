@@ -1,6 +1,6 @@
 import UIKit
 
-class IndexViewController: UIViewController {
+class FeedViewController: UIViewController {
     private let titleView = TitleView()
     
     override func viewDidLoad() {
@@ -47,7 +47,7 @@ class IndexViewController: UIViewController {
     }
 }
 
-extension IndexViewController: UIPopoverPresentationControllerDelegate {
+extension FeedViewController: UIPopoverPresentationControllerDelegate {
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         .none
     }

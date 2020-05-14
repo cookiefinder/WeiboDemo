@@ -30,10 +30,10 @@
             </objects>
             <point key="canvasLocation" x="-3004" y="3679"/>
         </scene>
-        <!--IndexViewController-->
+        <!--FeedViewController-->
         <scene sceneID="PAW-Ml-lMt">
             <objects>
-                <viewController storyboardIdentifier="IndexViewController" title="IndexViewController" id="B7T-ME-FV9" customClass="IndexViewController" customModule="WeiboDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FeedViewController" title="FeedViewController" id="B7T-ME-FV9" customClass="FeedViewController" customModule="WeiboDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WRX-cM-YOg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

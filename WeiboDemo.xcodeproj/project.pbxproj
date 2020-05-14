@@ -14,7 +14,7 @@
 		F4DD07A8246D156600D5E452 /* WeiboListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4DD07A6246D156600D5E452 /* WeiboListViewCell.xib */; };
 		F4DD07AB246D20DE00D5E452 /* UserWeiboListApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DD07AA246D20DE00D5E452 /* UserWeiboListApi.swift */; };
 		F4DD07AD246D21B600D5E452 /* WeiboContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DD07AC246D21B600D5E452 /* WeiboContent.swift */; };
-		F4DD07AF246D2B7800D5E452 /* UserWeiboListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DD07AE246D2B7800D5E452 /* UserWeiboListModel.swift */; };
+		F4DD07AF246D2B7800D5E452 /* UserWeiboListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DD07AE246D2B7800D5E452 /* UserWeiboListViewModel.swift */; };
 		F4EFBD0A24692E74002FE54C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFBD0824692E74002FE54C /* ViewController.swift */; };
 		F4EFBD1B246A6959002FE54C /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFBD1A246A6959002FE54C /* ListViewController.swift */; };
 		F4EFBD1D246A6BF2002FE54C /* UIWindow+JXSafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFBD1C246A6BF2002FE54C /* UIWindow+JXSafeArea.swift */; };
@@ -33,7 +33,7 @@
 		FD8C8D3B2469097C004317BC /* WeiboDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D3A2469097C004317BC /* WeiboDemoTests.swift */; };
 		FD8C8D462469097C004317BC /* WeiboDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D452469097C004317BC /* WeiboDemoUITests.swift */; };
 		FD8C8D5824695188004317BC /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D5724695188004317BC /* TitleView.swift */; };
-		FD8C8D5A246A42D9004317BC /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D59246A42D9004317BC /* IndexViewController.swift */; };
+		FD8C8D5A246A42D9004317BC /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D59246A42D9004317BC /* FeedViewController.swift */; };
 		FD8C8D68246AA7AC004317BC /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D67246AA7AC004317BC /* LoginManager.swift */; };
 		FD8C8D6B246B99CF004317BC /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D6A246B99CF004317BC /* R.generated.swift */; };
 		FD8C8D6E246B9C4B004317BC /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C8D6D246B9C4B004317BC /* TitleViewController.swift */; };
@@ -73,7 +73,7 @@
 		F4DD07A6246D156600D5E452 /* WeiboListViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeiboListViewCell.xib; sourceTree = "<group>"; };
 		F4DD07AA246D20DE00D5E452 /* UserWeiboListApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWeiboListApi.swift; sourceTree = "<group>"; };
 		F4DD07AC246D21B600D5E452 /* WeiboContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeiboContent.swift; sourceTree = "<group>"; };
-		F4DD07AE246D2B7800D5E452 /* UserWeiboListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWeiboListModel.swift; sourceTree = "<group>"; };
+		F4DD07AE246D2B7800D5E452 /* UserWeiboListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWeiboListViewModel.swift; sourceTree = "<group>"; };
 		F4EFBD0824692E74002FE54C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Cell/ViewController.swift; sourceTree = "<group>"; };
 		F4EFBD1A246A6959002FE54C /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		F4EFBD1C246A6BF2002FE54C /* UIWindow+JXSafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+JXSafeArea.swift"; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 		FD8C8D452469097C004317BC /* WeiboDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeiboDemoUITests.swift; sourceTree = "<group>"; };
 		FD8C8D472469097C004317BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD8C8D5724695188004317BC /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
-		FD8C8D59246A42D9004317BC /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
+		FD8C8D59246A42D9004317BC /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		FD8C8D62246AA52C004317BC /* WeiboDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeiboDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		FD8C8D67246AA7AC004317BC /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		FD8C8D6A246B99CF004317BC /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
@@ -164,40 +164,17 @@
 		F4DD07A9246D207900D5E452 /* Api */ = {
 			isa = PBXGroup;
 			children = (
+				FD8C8D67246AA7AC004317BC /* LoginManager.swift */,
 				F4EFBD2B246BAAD4002FE54C /* UserProfileApi.swift */,
 				F4DD07AA246D20DE00D5E452 /* UserWeiboListApi.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
 		};
-		F4EFBD1224695504002FE54C /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				FD8C8D2724690975004317BC /* HomeViewController.swift */,
-				F4EFBD20246A71FF002FE54C /* UserProfileHeaderView.swift */,
-				F4EFBD22246A7224002FE54C /* UserProfileHeaderView.xib */,
-				F4EFBD29246BA21A002FE54C /* HomeViewModel.swift */,
-				F4DD07AE246D2B7800D5E452 /* UserWeiboListModel.swift */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		F4EFBD15246A628C002FE54C /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				F4EFBD1A246A6959002FE54C /* ListViewController.swift */,
-				F4EFBD1C246A6BF2002FE54C /* UIWindow+JXSafeArea.swift */,
-				F4EFBD1E246A6C56002FE54C /* DetailViewController.swift */,
-				F4DD07A5246D156600D5E452 /* WeiboListViewCell.swift */,
-				F4DD07A6246D156600D5E452 /* WeiboListViewCell.xib */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
 		F4EFBD2F246BB8A8002FE54C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				F4EFBD2D246BAC19002FE54C /* Login.swift */,
+				F4EFBD1C246A6BF2002FE54C /* UIWindow+JXSafeArea.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -228,23 +205,20 @@
 		FD8C8D2224690975004317BC /* WeiboDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FD8C8D7B246D3A86004317BC /* ViewModel */,
+				FD8C8D7A246D39CF004317BC /* Page */,
 				FD8C8D75246BE5EF004317BC /* Model */,
-				FD8C8D6C246B9BED004317BC /* Popover */,
+				FD8C8D6C246B9BED004317BC /* View */,
+				F4DD07A9246D207900D5E452 /* Api */,
+				F4EFBD2F246BB8A8002FE54C /* Utils */,
 				FD8C8D2324690975004317BC /* AppDelegate.swift */,
 				FD8C8D2524690975004317BC /* SceneDelegate.swift */,
 				FD8C8D2924690975004317BC /* Main.storyboard */,
 				F4EFBD0824692E74002FE54C /* ViewController.swift */,
-				F4EFBD15246A628C002FE54C /* Common */,
-				F4EFBD1224695504002FE54C /* Home */,
 				FD8C8D2C2469097C004317BC /* Assets.xcassets */,
 				FD8C8D2E2469097C004317BC /* LaunchScreen.storyboard */,
 				FD8C8D312469097C004317BC /* Info.plist */,
-				FD8C8D5724695188004317BC /* TitleView.swift */,
-				FD8C8D59246A42D9004317BC /* IndexViewController.swift */,
 				FD8C8D62246AA52C004317BC /* WeiboDemo-Bridging-Header.h */,
-				FD8C8D67246AA7AC004317BC /* LoginManager.swift */,
-				F4DD07A9246D207900D5E452 /* Api */,
-				F4EFBD2F246BB8A8002FE54C /* Utils */,
 			);
 			path = WeiboDemo;
 			sourceTree = "<group>";
@@ -267,24 +241,50 @@
 			path = WeiboDemoUITests;
 			sourceTree = "<group>";
 		};
-		FD8C8D6C246B9BED004317BC /* Popover */ = {
+		FD8C8D6C246B9BED004317BC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F4EFBD20246A71FF002FE54C /* UserProfileHeaderView.swift */,
+				F4EFBD22246A7224002FE54C /* UserProfileHeaderView.xib */,
+				FD8C8D5724695188004317BC /* TitleView.swift */,
+				F4EFBD1A246A6959002FE54C /* ListViewController.swift */,
+				F4DD07A5246D156600D5E452 /* WeiboListViewCell.swift */,
+				F4DD07A6246D156600D5E452 /* WeiboListViewCell.xib */,
 				FD8C8D6D246B9C4B004317BC /* TitleViewController.swift */,
 				FD8C8D6F246B9E11004317BC /* TitleTableViewCell.swift */,
 				FD8C8D71246BE4AA004317BC /* AvatarViewController.swift */,
 				FD8C8D73246BE4C3004317BC /* AvatarTableViewCell.swift */,
 			);
-			path = Popover;
+			path = View;
 			sourceTree = "<group>";
 		};
 		FD8C8D75246BE5EF004317BC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F4EFBD2D246BAC19002FE54C /* Login.swift */,
 				FD8C8D76246BE5FB004317BC /* UserInfo.swift */,
 				F4DD07AC246D21B600D5E452 /* WeiboContent.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FD8C8D7A246D39CF004317BC /* Page */ = {
+			isa = PBXGroup;
+			children = (
+				F4EFBD1E246A6C56002FE54C /* DetailViewController.swift */,
+				FD8C8D59246A42D9004317BC /* FeedViewController.swift */,
+				FD8C8D2724690975004317BC /* HomeViewController.swift */,
+			);
+			path = Page;
+			sourceTree = "<group>";
+		};
+		FD8C8D7B246D3A86004317BC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F4DD07AE246D2B7800D5E452 /* UserWeiboListViewModel.swift */,
+				F4EFBD29246BA21A002FE54C /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -616,7 +616,7 @@
 				FD8C8D2424690975004317BC /* AppDelegate.swift in Sources */,
 				F4EFBD1B246A6959002FE54C /* ListViewController.swift in Sources */,
 				F4EFBD1D246A6BF2002FE54C /* UIWindow+JXSafeArea.swift in Sources */,
-				F4DD07AF246D2B7800D5E452 /* UserWeiboListModel.swift in Sources */,
+				F4DD07AF246D2B7800D5E452 /* UserWeiboListViewModel.swift in Sources */,
 				FD8C8D70246B9E11004317BC /* TitleTableViewCell.swift in Sources */,
 				F4EFBD2C246BAAD4002FE54C /* UserProfileApi.swift in Sources */,
 				FD8C8D2624690975004317BC /* SceneDelegate.swift in Sources */,
@@ -625,7 +625,7 @@
 				FD8C8D5824695188004317BC /* TitleView.swift in Sources */,
 				FD8C8D68246AA7AC004317BC /* LoginManager.swift in Sources */,
 				F4EFBD2A246BA21A002FE54C /* HomeViewModel.swift in Sources */,
-				FD8C8D5A246A42D9004317BC /* IndexViewController.swift in Sources */,
+				FD8C8D5A246A42D9004317BC /* FeedViewController.swift in Sources */,
 				FD8C8D6E246B9C4B004317BC /* TitleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

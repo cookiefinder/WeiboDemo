@@ -75,7 +75,7 @@ class HomeViewController: UIViewController {
         viewModel = HomeViewModel(viewController: self)
         viewModel.loadData()
         
-        userWeiboList = UserWeiboListModel(viewController: self)
+        userWeiboList = UserWeiboListViewModel(viewController: self)
         userWeiboList.loadData()
     }
     
