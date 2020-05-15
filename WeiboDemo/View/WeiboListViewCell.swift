@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class WeiboListViewCell: UITableViewCell {
 
@@ -15,5 +16,10 @@ class WeiboListViewCell: UITableViewCell {
     @IBOutlet weak var userScreenNameLabel: UILabel!
     @IBOutlet weak var weiboContentLabel: UILabel!
     
-    func configure() {}
+    func configure(model: UserWeiboTimeLine.WeiboContent) {
+        weiboContentLabel.text = model.text
+        userImageView.kf.setImage(with: model.user.userProfileImage)
+        userScreenNameLabel.text = model.user.userscreenName
+        print(model)
+    }
 }
