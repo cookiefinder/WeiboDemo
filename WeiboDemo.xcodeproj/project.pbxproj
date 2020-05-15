@@ -15,9 +15,8 @@
 		F4DD07AB246D20DE00D5E452 /* UserWeiboListApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DD07AA246D20DE00D5E452 /* UserWeiboListApi.swift */; };
 		F4DD07AD246D21B600D5E452 /* UserWeiboTimeLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DD07AC246D21B600D5E452 /* UserWeiboTimeLine.swift */; };
 		F4DD07AF246D2B7800D5E452 /* UserWeiboListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DD07AE246D2B7800D5E452 /* UserWeiboListViewModel.swift */; };
-		F4DD07B3246E3B0D00D5E452 /* TransferImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DD07B1246E3B0D00D5E452 /* TransferImageViewCell.swift */; };
-		F4DD07B4246E3B0D00D5E452 /* TransferImageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4DD07B2246E3B0D00D5E452 /* TransferImageViewCell.xib */; };
-		F4DD07B6246E3D7200D5E452 /* WeiboListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DD07B5246E3D7200D5E452 /* WeiboListTableView.swift */; };
+		F4DD07B8246E75C500D5E452 /* TransferImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DD07B7246E75C500D5E452 /* TransferImageView.swift */; };
+		F4DD07BA246E75D700D5E452 /* TransferimageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4DD07B9246E75D700D5E452 /* TransferimageView.xib */; };
 		F4EFBD0A24692E74002FE54C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFBD0824692E74002FE54C /* ViewController.swift */; };
 		F4EFBD1B246A6959002FE54C /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFBD1A246A6959002FE54C /* ListViewController.swift */; };
 		F4EFBD1D246A6BF2002FE54C /* UIWindow+JXSafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFBD1C246A6BF2002FE54C /* UIWindow+JXSafeArea.swift */; };
@@ -77,9 +76,8 @@
 		F4DD07AA246D20DE00D5E452 /* UserWeiboListApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWeiboListApi.swift; sourceTree = "<group>"; };
 		F4DD07AC246D21B600D5E452 /* UserWeiboTimeLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWeiboTimeLine.swift; sourceTree = "<group>"; };
 		F4DD07AE246D2B7800D5E452 /* UserWeiboListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWeiboListViewModel.swift; sourceTree = "<group>"; };
-		F4DD07B1246E3B0D00D5E452 /* TransferImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferImageViewCell.swift; sourceTree = "<group>"; };
-		F4DD07B2246E3B0D00D5E452 /* TransferImageViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransferImageViewCell.xib; sourceTree = "<group>"; };
-		F4DD07B5246E3D7200D5E452 /* WeiboListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeiboListTableView.swift; sourceTree = "<group>"; };
+		F4DD07B7246E75C500D5E452 /* TransferImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferImageView.swift; sourceTree = "<group>"; };
+		F4DD07B9246E75D700D5E452 /* TransferimageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransferimageView.xib; sourceTree = "<group>"; };
 		F4EFBD0824692E74002FE54C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Cell/ViewController.swift; sourceTree = "<group>"; };
 		F4EFBD1A246A6959002FE54C /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		F4EFBD1C246A6BF2002FE54C /* UIWindow+JXSafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+JXSafeArea.swift"; sourceTree = "<group>"; };
@@ -180,8 +178,8 @@
 		F4DD07B0246E399C00D5E452 /* WeiboCell */ = {
 			isa = PBXGroup;
 			children = (
-				F4DD07B1246E3B0D00D5E452 /* TransferImageViewCell.swift */,
-				F4DD07B2246E3B0D00D5E452 /* TransferImageViewCell.xib */,
+				F4DD07B7246E75C500D5E452 /* TransferImageView.swift */,
+				F4DD07B9246E75D700D5E452 /* TransferimageView.xib */,
 			);
 			path = WeiboCell;
 			sourceTree = "<group>";
@@ -263,7 +261,6 @@
 				F4EFBD22246A7224002FE54C /* UserProfileHeaderView.xib */,
 				FD8C8D5724695188004317BC /* TitleView.swift */,
 				F4EFBD1A246A6959002FE54C /* ListViewController.swift */,
-				F4DD07B5246E3D7200D5E452 /* WeiboListTableView.swift */,
 				F4DD07A5246D156600D5E452 /* WeiboListViewCell.swift */,
 				F4DD07A6246D156600D5E452 /* WeiboListViewCell.xib */,
 				FD8C8D6D246B9C4B004317BC /* TitleViewController.swift */,
@@ -419,7 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD8C8D302469097C004317BC /* LaunchScreen.storyboard in Resources */,
-				F4DD07B4246E3B0D00D5E452 /* TransferImageViewCell.xib in Resources */,
+				F4DD07BA246E75D700D5E452 /* TransferimageView.xib in Resources */,
 				F4DD07A8246D156600D5E452 /* WeiboListViewCell.xib in Resources */,
 				F4EFBD23246A7224002FE54C /* UserProfileHeaderView.xib in Resources */,
 				FD8C8D2D2469097C004317BC /* Assets.xcassets in Resources */,
@@ -625,7 +622,6 @@
 				FD8C8D74246BE4C3004317BC /* AvatarTableViewCell.swift in Sources */,
 				F4EFBD1F246A6C56002FE54C /* DetailViewController.swift in Sources */,
 				F4DD07AB246D20DE00D5E452 /* UserWeiboListApi.swift in Sources */,
-				F4DD07B6246E3D7200D5E452 /* WeiboListTableView.swift in Sources */,
 				F4EFBD2E246BAC19002FE54C /* Login.swift in Sources */,
 				FD8C8D6B246B99CF004317BC /* R.generated.swift in Sources */,
 				F4EFBD0A24692E74002FE54C /* ViewController.swift in Sources */,
@@ -633,10 +629,10 @@
 				F4DD07AD246D21B600D5E452 /* UserWeiboTimeLine.swift in Sources */,
 				FD8C8D2824690975004317BC /* HomeViewController.swift in Sources */,
 				FD8C8D2424690975004317BC /* AppDelegate.swift in Sources */,
-				F4DD07B3246E3B0D00D5E452 /* TransferImageViewCell.swift in Sources */,
 				F4EFBD1B246A6959002FE54C /* ListViewController.swift in Sources */,
 				F4EFBD1D246A6BF2002FE54C /* UIWindow+JXSafeArea.swift in Sources */,
 				F4DD07AF246D2B7800D5E452 /* UserWeiboListViewModel.swift in Sources */,
+				F4DD07B8246E75C500D5E452 /* TransferImageView.swift in Sources */,
 				FD8C8D70246B9E11004317BC /* TitleTableViewCell.swift in Sources */,
 				F4EFBD2C246BAAD4002FE54C /* UserProfileApi.swift in Sources */,
 				FD8C8D2624690975004317BC /* SceneDelegate.swift in Sources */,

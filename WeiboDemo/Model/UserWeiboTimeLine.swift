@@ -16,12 +16,14 @@ struct UserWeiboTimeLine: Decodable {
         let text: String
         let user: User
         let thumbnailPic: URL?  // 缩略图
+        let retweetedStatus: RetweetedStatus?
         
         enum CodingKeys: String, CodingKey {
             case createdAt = "created_at"
             case thumbnailPic = "thumbnail_pic"
             case user
             case text
+            case retweetedStatus = "retweeted_status"
         }
         
         struct User: Decodable {
@@ -32,6 +34,10 @@ struct UserWeiboTimeLine: Decodable {
                 case userscreenName = "screen_name"
                 case userProfileImage = "profile_image_url"
             }
+        }
+        
+        struct RetweetedStatus: Decodable {
+            let text: String
         }
     }
 }

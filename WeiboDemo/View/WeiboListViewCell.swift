@@ -16,6 +16,10 @@ class WeiboListViewCell: UITableViewCell {
     @IBOutlet weak var userScreenNameLabel: UILabel!
     @IBOutlet weak var weiboContentLabel: UILabel!
     
+    @IBOutlet weak var weiboTransferContentLabel: UILabel!
+    
+    @IBOutlet weak var transferWeiboImagesView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         userImageView.layer.cornerRadius = 40.0 / 2
@@ -35,6 +39,18 @@ class WeiboListViewCell: UITableViewCell {
         weiboContentLabel.text = model.text
         userImageView.kf.setImage(with: model.user.userProfileImage)
         userScreenNameLabel.text = model.user.userscreenName
+        
+        if let retweeted = model.retweetedStatus {
+                    weiboTransferContentLabel.text = retweeted.text
+            weiboTransferContentLabel.isHidden = false
+            transferWeiboImagesView.isHidden = false
+        } else {
+            weiboTransferContentLabel.isHidden = true
+            transferWeiboImagesView.isHidden = true
+        }
+    
+
+    
         print(model)
     }
 }

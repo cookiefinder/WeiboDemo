@@ -29,51 +29,61 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfH-UV-wRP">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfH-UV-wRP">
                         <rect key="frame" x="68" y="55" width="52.5" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="CFu-1K-OIz">
-                        <rect key="frame" x="68" y="81" width="247" height="128"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ycr-bA-Jl5">
-                            <size key="itemSize" width="128" height="128"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                    </collectionView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TimeLine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXH-MH-j4y">
                         <rect key="frame" x="260.5" y="14" width="54.5" height="16"/>
                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DMz-v8-eQO">
+                        <rect key="frame" x="68" y="86" width="247" height="127"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dor-aT-puJ">
+                                <rect key="frame" x="0.0" y="0.0" width="247" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="voo-1y-Kvy">
+                                <rect key="frame" x="0.0" y="20.5" width="247" height="106.5"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="106.5" id="JOi-BA-t1J"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="lXH-MH-j4y" secondAttribute="trailing" constant="14" id="025-Ie-0jY"/>
                     <constraint firstItem="rUM-P8-hyk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="4W8-Bg-QAl"/>
                     <constraint firstItem="zfH-UV-wRP" firstAttribute="top" secondItem="V9O-Ju-zls" secondAttribute="bottom" constant="24" id="Fqy-Ue-LtI"/>
-                    <constraint firstItem="CFu-1K-OIz" firstAttribute="leading" secondItem="zfH-UV-wRP" secondAttribute="leading" id="TuK-xx-nWP"/>
-                    <constraint firstItem="CFu-1K-OIz" firstAttribute="top" secondItem="zfH-UV-wRP" secondAttribute="bottom" constant="8" id="Uo9-97-zHb"/>
+                    <constraint firstItem="DMz-v8-eQO" firstAttribute="leading" secondItem="zfH-UV-wRP" secondAttribute="leading" id="J0w-qt-ocs"/>
                     <constraint firstItem="lXH-MH-j4y" firstAttribute="top" secondItem="V9O-Ju-zls" secondAttribute="top" id="ZlS-90-aVm"/>
                     <constraint firstItem="V9O-Ju-zls" firstAttribute="leading" secondItem="rUM-P8-hyk" secondAttribute="trailing" constant="14" id="c0b-ls-bxY"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="CFu-1K-OIz" secondAttribute="bottom" constant="6" id="g0z-ag-GK2"/>
                     <constraint firstItem="V9O-Ju-zls" firstAttribute="top" secondItem="rUM-P8-hyk" secondAttribute="top" id="jpv-tK-RJr"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zfH-UV-wRP" secondAttribute="trailing" constant="14" id="m0G-Y3-eYo"/>
                     <constraint firstItem="zfH-UV-wRP" firstAttribute="leading" secondItem="V9O-Ju-zls" secondAttribute="leading" id="m6t-g3-ytq"/>
+                    <constraint firstItem="DMz-v8-eQO" firstAttribute="top" secondItem="zfH-UV-wRP" secondAttribute="bottom" constant="13" id="njI-S5-lOb"/>
+                    <constraint firstAttribute="trailing" secondItem="DMz-v8-eQO" secondAttribute="trailing" constant="14" id="rZb-YO-R95"/>
                     <constraint firstItem="rUM-P8-hyk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="ro6-kv-x6j"/>
-                    <constraint firstAttribute="trailing" secondItem="CFu-1K-OIz" secondAttribute="trailing" constant="14" id="xX0-SA-fP4"/>
+                    <constraint firstAttribute="bottom" secondItem="DMz-v8-eQO" secondAttribute="bottom" constant="13" id="t89-K6-Gax"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="transferWeiboImagesView" destination="voo-1y-Kvy" id="Q4Y-iQ-DgX"/>
                 <outlet property="userImageView" destination="rUM-P8-hyk" id="qTW-tj-Avt"/>
                 <outlet property="userScreenNameLabel" destination="V9O-Ju-zls" id="ncQ-Jm-xQT"/>
                 <outlet property="weiboContentLabel" destination="zfH-UV-wRP" id="hcQ-TR-lUp"/>
                 <outlet property="weiboTimeLineLabel" destination="lXH-MH-j4y" id="UX7-uv-PGR"/>
+                <outlet property="weiboTransferContentLabel" destination="Dor-aT-puJ" id="pue-Fq-paE"/>
             </connections>
             <point key="canvasLocation" x="-205.07246376811597" y="53.571428571428569"/>
         </tableViewCell>
