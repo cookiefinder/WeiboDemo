@@ -9,8 +9,21 @@
 import UIKit
 
 class AvatarViewController: UIViewController {
+    @IBOutlet weak var tableView: UITableView!
+    
+    private let cellHeight: CGFloat = 40
+    var tableViewHeight: CGFloat {
+        2 * cellHeight
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override var preferredContentSize: CGSize {
+        get {
+            return CGSize(width: 300, height: tableViewHeight)
+        }
+        set {}
     }
 }
 
@@ -20,10 +33,14 @@ extension AvatarViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AvatarTableViewCell", for: indexPath) as! AvatarTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.avatarTableViewCell, for: indexPath)!
         let userInfo = UserInfo(avatarImage: "http://xxx", name: "Admin")
         cell.config(with: userInfo, isCheck: true, isLast: indexPath.row == 1)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        cellHeight
     }
 }
 

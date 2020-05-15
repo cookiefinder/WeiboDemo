@@ -14,7 +14,9 @@ class TitleTableViewCell: UITableViewCell {
     @IBOutlet weak var checkButton: UIButton!
     
     func config(with topic: String, isCheck: Bool) {
-        topicLabel.font = UIFont.systemFont(ofSize: isCheck ? 18 : 16)
+        if isCheck {
+            topicLabel.font = UIFont.boldSystemFont(ofSize: topicLabel.font.pointSize)
+        }
         topicLabel.text = topic
         checkButton.isHidden = !isCheck
     }

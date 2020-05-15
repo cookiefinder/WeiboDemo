@@ -12,11 +12,12 @@ class FeedViewController: UIViewController {
             guard let self = self else { return }
             let vc = R.storyboard.main.titleViewController()!
             vc.getCurrentTopic = {
-                self.titleView.getCurrentTopic()!
+                self.titleView.getCurrentTopic()
             }
             vc.updateCurrentTopic = {(topic: String) -> Void in
                 self.titleView.updateCurrentTopic(topic: topic)
             }
+            self.titleView.setTriangleImage(image: R.image.triangleArrowU())
             self.showPopover(vc: vc, anchor: self.titleView)
         }
         navigationItem.titleView = titleView
@@ -36,12 +37,11 @@ class FeedViewController: UIViewController {
         vc.modalPresentationStyle = .popover
         vc.popoverPresentationController?.delegate = self
         vc.popoverPresentationController?.permittedArrowDirections = .any
+        
         if let anchor = anchor as? UIView {
             vc.popoverPresentationController?.sourceView = anchor
-            vc.preferredContentSize = CGSize(width: 200, height: 300)
         } else if let anchor = anchor as? UIBarButtonItem {
             vc.popoverPresentationController?.barButtonItem = anchor
-            vc.preferredContentSize = CGSize(width: 300, height: 80)
         }
         present(vc, animated: true, completion: nil)
     }
@@ -50,10 +50,6 @@ class FeedViewController: UIViewController {
 extension FeedViewController: UIPopoverPresentationControllerDelegate {
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         .none
-    }
-    
-    func prepareForPopoverPresentation(_ popoverPresentationController: UIPopoverPresentationController) {
-        titleView.setTriangleImage(image: R.image.triangleArrowU())
     }
     
     func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) {

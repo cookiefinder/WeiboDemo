@@ -19,5 +19,4 @@ class AvatarTableViewCell: UITableViewCell {
         checkButton.isHidden = isLast || !isCheck
         nameLabel.text = isLast ? "添加账户" : userInfo.name
     }
-
 }
