@@ -11,16 +11,16 @@ import Alamofire
 
 
 protocol UserWeiboListApiProtocol {
-    func userWeiboList(completion: @escaping (Result<WeiboContent, LoginManager.ApiError>) -> Void)
+    func userWeiboList(completion: @escaping (Result<UserWeiboTimeLine, LoginManager.ApiError>) -> Void)
 }
 class UserWeiboListApi: UserWeiboListApiProtocol {
     let url = "https://api.weibo.com/2/statuses/user_timeline.json"
     
-    func userWeiboList(completion: @escaping (Result<WeiboContent, LoginManager.ApiError>) -> Void) {
+    func userWeiboList(completion: @escaping (Result<UserWeiboTimeLine, LoginManager.ApiError>) -> Void) {
         AF.request(url,
                    method: .get,
                    parameters: Login(access_token: LoginManager.accessToken ?? "", uid: LoginManager.userID ?? ""))
-            .responseDecodable(of: WeiboContent.self) { (response) in
+            .responseDecodable(of: UserWeiboTimeLine.self) { (response) in
             switch response.result {
             case .success(let value):
                 completion(.success(value))

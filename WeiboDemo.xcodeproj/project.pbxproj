@@ -13,7 +13,7 @@
 		F4DD07A7246D156600D5E452 /* WeiboListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DD07A5246D156600D5E452 /* WeiboListViewCell.swift */; };
 		F4DD07A8246D156600D5E452 /* WeiboListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4DD07A6246D156600D5E452 /* WeiboListViewCell.xib */; };
 		F4DD07AB246D20DE00D5E452 /* UserWeiboListApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DD07AA246D20DE00D5E452 /* UserWeiboListApi.swift */; };
-		F4DD07AD246D21B600D5E452 /* WeiboContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DD07AC246D21B600D5E452 /* WeiboContent.swift */; };
+		F4DD07AD246D21B600D5E452 /* UserWeiboTimeLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DD07AC246D21B600D5E452 /* UserWeiboTimeLine.swift */; };
 		F4DD07AF246D2B7800D5E452 /* UserWeiboListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DD07AE246D2B7800D5E452 /* UserWeiboListViewModel.swift */; };
 		F4EFBD0A24692E74002FE54C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFBD0824692E74002FE54C /* ViewController.swift */; };
 		F4EFBD1B246A6959002FE54C /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFBD1A246A6959002FE54C /* ListViewController.swift */; };
@@ -72,7 +72,7 @@
 		F4DD07A5246D156600D5E452 /* WeiboListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeiboListViewCell.swift; sourceTree = "<group>"; };
 		F4DD07A6246D156600D5E452 /* WeiboListViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeiboListViewCell.xib; sourceTree = "<group>"; };
 		F4DD07AA246D20DE00D5E452 /* UserWeiboListApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWeiboListApi.swift; sourceTree = "<group>"; };
-		F4DD07AC246D21B600D5E452 /* WeiboContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeiboContent.swift; sourceTree = "<group>"; };
+		F4DD07AC246D21B600D5E452 /* UserWeiboTimeLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWeiboTimeLine.swift; sourceTree = "<group>"; };
 		F4DD07AE246D2B7800D5E452 /* UserWeiboListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWeiboListViewModel.swift; sourceTree = "<group>"; };
 		F4EFBD0824692E74002FE54C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Cell/ViewController.swift; sourceTree = "<group>"; };
 		F4EFBD1A246A6959002FE54C /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -263,7 +263,7 @@
 			children = (
 				F4EFBD2D246BAC19002FE54C /* Login.swift */,
 				FD8C8D76246BE5FB004317BC /* UserInfo.swift */,
-				F4DD07AC246D21B600D5E452 /* WeiboContent.swift */,
+				F4DD07AC246D21B600D5E452 /* UserWeiboTimeLine.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -611,7 +611,7 @@
 				FD8C8D6B246B99CF004317BC /* R.generated.swift in Sources */,
 				F4EFBD0A24692E74002FE54C /* ViewController.swift in Sources */,
 				F4DD07A7246D156600D5E452 /* WeiboListViewCell.swift in Sources */,
-				F4DD07AD246D21B600D5E452 /* WeiboContent.swift in Sources */,
+				F4DD07AD246D21B600D5E452 /* UserWeiboTimeLine.swift in Sources */,
 				FD8C8D2824690975004317BC /* HomeViewController.swift in Sources */,
 				FD8C8D2424690975004317BC /* AppDelegate.swift in Sources */,
 				F4EFBD1B246A6959002FE54C /* ListViewController.swift in Sources */,

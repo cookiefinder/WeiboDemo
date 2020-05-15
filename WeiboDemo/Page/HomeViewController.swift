@@ -14,7 +14,7 @@ extension JXPagingListContainerView: JXSegmentedViewListContainer {}
 
 protocol HomeViewControllerProtocol: class {
     func showUserProfile(model: UserProfileApi.Response)
-    func showUserWeiboContent(model: WeiboContent)
+    func showUserWeiboContent(model: [UserWeiboTimeLine.WeiboContent])
     func showAlert(message: String)
 }
 
@@ -164,7 +164,7 @@ extension HomeViewController: HomeViewControllerProtocol {
         userHeaderView.configure(model: model)
     }
     
-    func showUserWeiboContent(model: WeiboContent) {
+    func showUserWeiboContent(model: [UserWeiboTimeLine.WeiboContent]) {
     }
 
     func showAlert(message: String) {

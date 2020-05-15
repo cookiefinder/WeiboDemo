@@ -8,7 +8,7 @@
 
 import Foundation
 protocol UserWeiboListModelProtocol {
-    var userWeiboContent: WeiboContent? { get }
+    var userWeiboContent: [UserWeiboTimeLine.WeiboContent]? { get }
     func loadData()
 }
 
@@ -21,7 +21,7 @@ class UserWeiboListViewModel: UserWeiboListModelProtocol {
     
     var userWeiboListApi: UserWeiboListApiProtocol = UserWeiboListApi()
     
-    var userWeiboContent: WeiboContent?
+    var userWeiboContent: [UserWeiboTimeLine.WeiboContent]?
     
     func loadData() {
         userWeiboListApi.userWeiboList { [weak self] (result) in
@@ -30,9 +30,10 @@ class UserWeiboListViewModel: UserWeiboListModelProtocol {
             
             switch result {
             case .success(let response):
+                print(response)
+                self.userWeiboContent = response.statuses
                 
-                self.userWeiboContent = response
-                self.viewController.showUserWeiboContent(model: response)
+                self.viewController.showUserWeiboContent(model: response.statuses)
 //                self.viewController.reloadTableView()
 //                self.viewController.scrollToTop()
                 
