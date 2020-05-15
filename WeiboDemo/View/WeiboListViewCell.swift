@@ -16,7 +16,22 @@ class WeiboListViewCell: UITableViewCell {
     @IBOutlet weak var userScreenNameLabel: UILabel!
     @IBOutlet weak var weiboContentLabel: UILabel!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        userImageView.layer.cornerRadius = 40.0 / 2
+    }
+ 
     func configure(model: UserWeiboTimeLine.WeiboContent) {
+
+        let dataFormatter = DateFormatter()
+        dataFormatter.dateFormat = "EEE MMM dd HH:mm:ss ZZZZ yyyy"
+        if let date = dataFormatter.date(from: model.createdAt) {
+            dataFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+            weiboTimeLineLabel.text = dataFormatter.string(from: date)
+        } else {
+            weiboTimeLineLabel.text = " "
+        }
+
         weiboContentLabel.text = model.text
         userImageView.kf.setImage(with: model.user.userProfileImage)
         userScreenNameLabel.text = model.user.userscreenName

@@ -70,7 +70,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="userImageView" destination="rUM-P8-hyk" id="uPc-5o-dWj"/>
+                <outlet property="userImageView" destination="rUM-P8-hyk" id="qTW-tj-Avt"/>
                 <outlet property="userScreenNameLabel" destination="V9O-Ju-zls" id="ncQ-Jm-xQT"/>
                 <outlet property="weiboContentLabel" destination="zfH-UV-wRP" id="hcQ-TR-lUp"/>
                 <outlet property="weiboTimeLineLabel" destination="lXH-MH-j4y" id="UX7-uv-PGR"/>

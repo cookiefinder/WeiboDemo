@@ -26,7 +26,7 @@ class ListViewController: UIViewController {
         tableView.tableFooterView = UIView()
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(UINib.init(nibName: "WeiboListViewCell" , bundle: nil), forCellReuseIdentifier: "WeiboListViewCell")
+        tableView.register(UINib(nibName: "WeiboListViewCell" , bundle: nil), forCellReuseIdentifier: "WeiboListViewCell")
         //列表的contentInsetAdjustmentBehavior失效，需要自己设置底部inset
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: UIApplication.shared.keyWindow!.jx_layoutInsets().bottom, right: 0)
         view.addSubview(tableView)
