@@ -88,6 +88,7 @@
 		F4EFBD2B246BAAD4002FE54C /* UserProfileApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileApi.swift; sourceTree = "<group>"; };
 		F4EFBD2D246BAC19002FE54C /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		F66F4DCFBE00011AB7332E27 /* Pods-WeiboDemo-WeiboDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeiboDemo-WeiboDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-WeiboDemo-WeiboDemoUITests/Pods-WeiboDemo-WeiboDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FD0BF5F22470DDC300EA6440 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		FD8C8D2024690975004317BC /* WeiboDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeiboDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD8C8D2324690975004317BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD8C8D2524690975004317BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -232,6 +233,7 @@
 				FD8C8D2E2469097C004317BC /* LaunchScreen.storyboard */,
 				FD8C8D312469097C004317BC /* Info.plist */,
 				FD8C8D62246AA52C004317BC /* WeiboDemo-Bridging-Header.h */,
+				FD0BF5F22470DDC300EA6440 /* MyPlayground.playground */,
 			);
 			path = WeiboDemo;
 			sourceTree = "<group>";

@@ -7,35 +7,49 @@
 //
 
 import Foundation
+import Alamofire
 
 class LoginManager {
     static var accessToken: String?
     static var userID: String?
+    static var refreshToken: String?
+    static var expirationDate: Date?
     static var hasLogin: Bool {
         accessToken != nil && userID != nil
     }
     
-    static func saveTokenToDisk(token: String) {
-        UserDefaults.standard.set(accessToken, forKey: "accessToken")
+    static func saveToDisk(param: [String: Any]) {
+        UserDefaults.standard.set(param, forKey: "login")
     }
     
-    static func readTokenFromDisk() -> String? {
-        UserDefaults.standard.string(forKey: "accessToken")
+    static func readFromDisk() -> [String: Any]? {
+        UserDefaults.standard.dictionary(forKey: "login")
     }
     
-    static func saveUserIDToDisk(userID: String) {
-        UserDefaults.standard.set(userID, forKey: "userID")
-    }
-    
-    static func readUserIDFromDisk() -> String? {
-        UserDefaults.standard.string(forKey: "userID")
-    }
-    
-    func authorize() {
+    static func authorize() {
         let request = WBAuthorizeRequest()
         request.redirectURI = "https://api.weibo.com/oauth2/default.html"
         request.scope = "all"
         WeiboSDK.send(request)
+    }
+    
+    static func refreshToken(completion: @escaping (Result<RefreshTokenResponse, LoginManager.ApiError>) -> Void) {
+        let url = "https://api.weibo.com/oauth2/access_token"
+        AF.request(url, method: .post, parameters: [
+            "client_id": "3528051087",
+            "client_secret": "a5df49cbad5325e4ddf637d563464515",
+            "grant_type": "refresh_token",
+            "redirect_uri": "https://api.weibo.com/oauth2/default.html",
+            "refresh_token": LoginManager.refreshToken ?? ""
+        ]).responseDecodable(of: RefreshTokenResponse.self) { (response) in
+            switch response.result {
+                case .success(let data):
+                    completion(.success(data))
+                case .failure(let error):
+                    print(error)
+                    completion(.failure(LoginManager.ApiError(message: error.localizedDescription)))
+            }
+        }
     }
     
     struct ApiError: Error {

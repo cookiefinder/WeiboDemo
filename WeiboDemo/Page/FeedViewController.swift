@@ -21,11 +21,7 @@ class FeedViewController: UIViewController {
             self.showPopover(vc: vc, anchor: self.titleView)
         }
         navigationItem.titleView = titleView
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            if !LoginManager.hasLogin {
-                LoginManager().authorize()
-            }
-        }
+        checkAccessTokenIsInvalid()
     }
     
     @IBAction func handleClickAvatarImage(_ sender: Any) {
@@ -44,6 +40,39 @@ class FeedViewController: UIViewController {
             vc.popoverPresentationController?.barButtonItem = anchor
         }
         present(vc, animated: true, completion: nil)
+    }
+    
+    func checkAccessTokenIsInvalid() {
+        let nowDate: Date = DateFormatter().date(from: Date().description(with: Locale.current)) ?? Date()
+        
+        // TODO compare expire date and locale date
+        let isExpire = LoginManager.expirationDate?.compare(nowDate) == .orderedAscending
+        if isExpire {
+            LoginManager.refreshToken { (result) in
+                switch result {
+                case .success(let data):
+                    if data.expiresIn ?? 0 > 0 {
+                        // TODO new expire date = now date add 1 day or 30 days
+                        let newExpirationDate = nowDate.addingTimeInterval(1 * 24 * 60 * 60)
+                        LoginManager.saveToDisk(param: [
+                            "accessToken": data.accessToken ?? "",
+                            "userID": data.userId ?? "",
+                            "refreshToken": data.refreshToken ?? "",
+                            "expirationDate": newExpirationDate
+                        ])
+                    } else {
+                        LoginManager.authorize()
+                    }
+                case .failure(let apiError):
+                    print(apiError)
+                    LoginManager.authorize()
+                }
+                
+            }
+        } else if !LoginManager.hasLogin {
+            LoginManager.authorize()
+        }
+        
     }
 }
 

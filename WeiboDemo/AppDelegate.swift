@@ -16,8 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WeiboSDKDelegate {
         WeiboSDK.enableDebugMode(true)
         WeiboSDK.registerApp("3528051087")
         
-        LoginManager.accessToken = LoginManager.readTokenFromDisk()
-        LoginManager.userID = LoginManager.readUserIDFromDisk()
+        let cacheLoginInfo = LoginManager.readFromDisk()
+        LoginManager.accessToken = cacheLoginInfo?["accessToken"] as? String
+        LoginManager.userID = cacheLoginInfo?["userID"] as? String
+        LoginManager.refreshToken = cacheLoginInfo?["refreshToken"] as? String
+        LoginManager.expirationDate = cacheLoginInfo?["expirationDate"] as? Date
         
         return true
     }
@@ -45,15 +48,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WeiboSDKDelegate {
     }
     
     func didReceiveWeiboResponse(_ response: WBBaseResponse!) {
-        print(response)
         if let response = response as? WBAuthorizeResponse {
-            print(response.accessToken)
-            
             LoginManager.accessToken = response.accessToken
             LoginManager.userID = response.userID
+            LoginManager.refreshToken = response.refreshToken
+            LoginManager.expirationDate = response.expirationDate
             
-            LoginManager.saveTokenToDisk(token: response.accessToken)
-            LoginManager.saveUserIDToDisk(userID: response.userID)
+            LoginManager.saveToDisk(param: [
+                "accessToken": LoginManager.accessToken ?? "",
+                "userID": LoginManager.userID ?? "",
+                "refreshToken": LoginManager.refreshToken ?? "",
+                "expirationDate": LoginManager.expirationDate ?? Date()
+            ])
         }
     }
     
