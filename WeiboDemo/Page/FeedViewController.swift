@@ -65,7 +65,9 @@ class FeedViewController: UIViewController {
                     }
                 case .failure(let apiError):
                     print(apiError)
-                    LoginManager.authorize()
+                    if apiError.error_code == 21327 {
+                        LoginManager.authorize()
+                    }
                 }
                 
             }

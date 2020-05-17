@@ -28,18 +28,12 @@ class HomeViewModel: HomeViewModelProtocol {
     func loadData() {
         userProfileApi.userProfile { [weak self] (result) in
             guard let self = self else { return }
-//            self.viewController.stopPullToRefresh()
-            
             switch result {
             case .success(let response):
-                
                 self.userProfile = response
                 self.viewController.showUserProfile(model: response)
-//                self.viewController.reloadTableView()
-//                self.viewController.scrollToTop()
-                
             case .failure(let error):
-                return self.viewController.showAlert(message: error.message)
+                return self.viewController.showAlert(message: error.error_description)
             }
         }
     }

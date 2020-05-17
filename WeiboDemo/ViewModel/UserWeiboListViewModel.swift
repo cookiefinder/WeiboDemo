@@ -26,19 +26,12 @@ class UserWeiboListViewModel: UserWeiboListModelProtocol {
     func loadData() {
         userWeiboListApi.userWeiboList { [weak self] (result) in
             guard let self = self else { return }
-//            self.viewController.stopPullToRefresh()
-            
             switch result {
             case .success(let response):
-                print(response)
                 self.userWeiboContent = response.statuses
-                
                 self.viewController.showUserWeiboContent(model: response.statuses)
-//                self.viewController.reloadTableView()
-//                self.viewController.scrollToTop()
-                
             case .failure(let error):
-                return self.viewController.showAlert(message: error.message)
+                return self.viewController.showAlert(message: error.error_description)
             }
         }
     }

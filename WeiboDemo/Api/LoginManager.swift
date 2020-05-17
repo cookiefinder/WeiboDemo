@@ -46,13 +46,19 @@ class LoginManager {
                 case .success(let data):
                     completion(.success(data))
                 case .failure(let error):
-                    print(error)
-                    completion(.failure(LoginManager.ApiError(message: error.localizedDescription)))
+                    if response.response?.statusCode == 400,
+                        let data = response.data,
+                        let apiError = try? JSONDecoder().decode(ApiError.self, from: data) {
+                        completion(.failure(apiError))
+                    }
+                    completion(.failure(LoginManager.ApiError(error: "unkouwn error", error_code: -1, error_description: error.localizedDescription)))
             }
         }
     }
     
-    struct ApiError: Error {
-        let message: String
+    struct ApiError: Error, Decodable {
+        let error: String
+        let error_code: Int
+        let error_description: String
     }
 }

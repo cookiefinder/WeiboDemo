@@ -49,8 +49,7 @@ class UserProfileApi: UserProfileApiProtocol {
             case .success(let value):
                 completion(.success(value))
             case .failure(let error):
-                print(error)
-                completion(.failure(LoginManager.ApiError(message: error.localizedDescription)))
+                completion(.failure(LoginManager.ApiError(error: "error", error_code: -1, error_description: error.localizedDescription)))
             }
         }
     }
